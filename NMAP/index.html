@@ -1,0 +1,1013 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.10.1 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="de" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Nmap - x44 x4d x47</title>
+<meta name="description" content="Eine kurze Einführung in den Netzwerk/Portscanner Nmap">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="de_DE">
+<meta property="og:site_name" content="x44 x4d x47">
+<meta property="og:title" content="Nmap">
+<meta property="og:url" content="https://dg60.github.io/NMAP/">
+
+
+  <meta property="og:description" content="Eine kurze Einführung in den Netzwerk/Portscanner Nmap">
+
+
+
+  <meta property="og:image" content="https://dg60.github.io/images/docs/nmap.png">
+
+
+
+  <meta name="twitter:site" content="@60dmg">
+  <meta name="twitter:title" content="Nmap">
+  <meta name="twitter:description" content="Eine kurze Einführung in den Netzwerk/Portscanner Nmap">
+  <meta name="twitter:url" content="https://dg60.github.io/NMAP/">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+      <meta name="twitter:image" content="https://dg60.github.io/images/docs/nmap.png">
+    
+  
+
+  
+
+
+
+  <meta property="article:published_time" content="2018-01-03T00:00:00+01:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://dg60.github.io/NMAP/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Daniel Grill",
+      "url": "https://dg60.github.io",
+      "sameAs": null
+    }
+  </script>
+
+
+
+  <meta name="google-site-verification" content="googledc32a20f3ee3a459.html" />
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="x44 x4d x47 Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="https://dg60.github.io/assets/css/main.css">
+<link rel="icon" href="/favicon.ico" type="image/favicon.icon">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="https://dg60.github.io/">x44 x4d x47</a>
+        <ul class="visible-links">
+          
+            
+            <li class="masthead__menu-item">
+              <a href="https://dg60.github.io/blog_de/" >Blog</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="https://dg60.github.io/about_de/" >Über mich</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="https://dg60.github.io/work_de/" >Projekte</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="https://dg60.github.io/docs/linux_01/" >CLI Befehle</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="https://dg60.github.io/downloads/" >Downloads</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="https://dg60.github.io/impressum/" >Impressum</a>
+            </li>
+          
+        </ul>
+        
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Menü ein-/ausschalten</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+
+      
+        <img src="https://dg60.github.io/images/bio-photo.jpg" alt="Daniel Grill" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Daniel Grill</h3>
+    
+    
+      <p class="author__bio" itemprop="description">
+        Technikfreak
+      </p>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Folgen</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="http://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Österreich/Austria</span>
+        </li>
+      
+
+      
+        <li>
+          <a href="https://dg60.github.io/" itemprop="url">
+            <i class="fas fa-fw fa-link" aria-hidden="true"></i> Webseite
+          </a>
+        </li>
+      
+
+      
+        <li>
+          <a href="mailto:info@dgrill.at">
+            <meta itemprop="email" content="info@dgrill.at" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> E-Mail
+          </a>
+        </li>
+      
+
+      
+
+      
+        <li>
+          <a href="https://twitter.com/60dmg" itemprop="sameAs">
+            <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter
+          </a>
+        </li>
+      
+
+      
+        <li>
+          <a href="https://www.facebook.com/danielmichael.grill" itemprop="sameAs">
+            <i class="fab fa-fw fa-facebook-square" aria-hidden="true"></i> Facebook
+          </a>
+        </li>
+      
+
+      
+
+      
+        <li>
+          <a href="https://www.linkedin.com/in/daniel-grill-685816127" itemprop="sameAs">
+            <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://github.com/dg60" itemprop="sameAs">
+            <i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Nmap">
+    <meta itemprop="description" content="Eine kurze Einführung in den Netzwerk/Portscanner Nmap">
+    <meta itemprop="datePublished" content="January 03, 2018">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">Nmap
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  12 Minuten zum lesen
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-cog"></i> Inhalt</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#installation">Installation</a></li>
+  <li><a href="#grundlegende-port-scanning-methoden">Grundlegende Port-Scanning Methoden</a></li>
+  <li><a href="#basis-scan-via-cli">Basis Scan via CLI</a></li>
+  <li><a href="#nse-schwachstellen-scan">NSE Schwachstellen Scan</a></li>
+  <li><a href="#basis-scan-via-zenmap">Basis Scan via Zenmap</a></li>
+  <li><a href="#mehr-informationen">Mehr Informationen</a></li>
+</ul>
+            </nav>
+          </aside>
+        
+        <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">It´s time to hack</span><span class="dl">'</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>Hallo,</p>
+
+<p>Heute möchte ich euch kurz den Netzwerk/Portscanner <a href="https://nmap.org/">Nmap</a> vorstellen. Der mittels CLI Interface oder GUI <a href="https://nmap.org/zenmap/">Zenmap</a> sehr komfortabel gesteuert werden kann. Nmap dient Primär zur Aufklärung und Erkennung von Schwachstellen in einem Netzwerk.</p>
+
+<p><a href="https://de.wikipedia.org/wiki/Portscanner">Grundlagen Portscanning</a></p>
+
+<p><img src="/images/docs/nmap.png" alt="image-center" class="align-center" /></p>
+
+<p><strong>Primäre Aufgaben von Nmap:</strong></p>
+
+<ul>
+  <li>Durchführen von Netzwerksscans</li>
+  <li>Prüfen welche Ports am Zielsystem geöffnet sind</li>
+  <li>Erkennug der Dienste die hinter den offenen Ports laufen</li>
+  <li>Schwachstellenerkennung mittels <a href="https://nmap.org/book/nse-usage.html">NSE</a> skripten</li>
+  <li>uvm.</li>
+</ul>
+
+<h2 id="installation">Installation</h2>
+
+<p>Der einfachste weg ist es die Kali Linux Distribution von <a href="https://www.kali.org/">Kali.org</a> herunter zu laden. Die Distribution gibt es als live Image oder als Abild einer Virtuelle Maschine für die Hypervisoren Vmware Player/Virtual Box auf der Seite von <a href="https://www.offensive-security.com/kali-linux-vmware-virtualbox-image-download/">Offense Security</a>.</p>
+
+<p>Es ist jedoch auch ohne weiteres möglich Nmap wie jedes andere Programm zu installieren. <a href="https://nmap.org/download.html">Nmap</a> stellt die Binaries für alle gängigen Betriebssysteme(Linux, MacOS, Windows) zur verfügung.</p>
+
+<p class="notice--danger"><strong>Bitte führen sie keine Netzwerk oder Portscan in fremden Netzwerken oder in deren sie nicht berechtigt sind.</strong></p>
+
+<h2 id="grundlegende-port-scanning-methoden">Grundlegende Port-Scanning Methoden</h2>
+
+<ul>
+  <li>
+    <p>-sS <strong>TCP-SYN-Scan</strong>
+Der SYN-Scan ist aus gutem Grund die Standardeinstellung und die beliebteste Scan-Methode. Er kann schnell durchgeführt werden und scannt dabei Tausende von Ports pro Sekunde, wenn das Netzwerk schnell ist und nicht von einer intrusiven Firewall behindert wird. Der SYN-Scan ist relativ unauffällig, da er TCP-Verbindungen niemals abschließt. Außerdem funktioniert er auch bei allen konformen TCP-Stacks und ist unabhängig von spezifischen Eigenarten von Plattformen, wie es bei den FIN-/NULL-/Xmas-, Maimon- und Idle-Scans in Nmap der Fall ist. Er erlaubt auch eine klare, zuverlässige Unterscheidung zwischen den Zuständen offen, geschlossen und gefiltert. Diese Methode wird oft als halboffenes Scannen bezeichnet, weil keine vollständige TCP-Verbindung hergestellt wird. Sie senden ein SYN-Paket, als ob Sie eine echte Verbindung herstellen würden, und warten dann auf eine Antwort. Ein SYN/ACK zeigt, dass jemand auf dem Port lauscht (dass er offen ist), während ein RST (Reset) anzeigt, dass niemand darauf lauscht. Falls nach mehreren erneuten Übertragungen keine Antwort erhalten wird, wird der Port als gefiltert markiert. Der Port wird auch dann als gefiltert markiert, wenn ein ICMP Unreachable-Fehler (Typ 3, Code 1, 2, 3, 9, 10 oder 13) empfangen wird.</p>
+  </li>
+  <li>
+    <p>-sT  <strong>TCP-Connect-Scan</strong> 
+Der TCP-Connect-Scan ist der standardmäßig eingestellte TCP-Scan-Typ, falls der SYN-Scan(-sS) nicht möglich ist. Das ist dann der Fall, wenn der Benutzer kein Recht hat, rohe Pakete zu senden, oder wenn er IPv6-Netzwerke scannt. Statt rohe Pakete zu schreiben, wie es die meisten anderen Scan-Typen machen, bittet Nmap das darunterliegende Betriebssystem, eine Verbindung mit dem Zielrechner und -port herzustellen, indem es einen Systemaufruf namens connect benutzt. Das ist derselbe Systemaufruf auf höherer Ebene, den Webbrowser, P2P-Clients und die meisten anderen netzwerkfähigen Anwendungen benutzen, um eine Verbindung herzustellen. Er ist Teil einer Programmierschnittstelle, die unter dem Namen Berkeley Sockets-API bekannt ist. Statt Antworten in Form roher Pakete von der Leitung zu lesen, benutzt Nmap diese API, um zu jedem Verbindungsversuch eine Statusinformation zu erhalten. Wenn der SYN-Scan verfügbar ist, ist er normalerweise die bessere Wahl. Nmap hat weniger Einfluss auf den connect-Systemaufruf als auf rohe Pakete, wodurch es weniger effizient wird. Der Systemaufruf beendet Verbindungen zu offenen Ziel-Ports vollständig, statt sie in halboffenen Zustand zurückzusetzen, wie es der SYN-Scan macht. Das dauert nicht nur länger und erfordert mehr Pakete, um an dieselbe Information zu gelangen, sondern es ist sehr viel wahrscheinlicher, dass die Zielrechner die Verbindung protokollieren.</p>
+  </li>
+</ul>
+
+<p><strong>Standardports und die dahinter stehenden Dienste:</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Portnummer</th>
+      <th style="text-align: left">Service</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">20</td>
+      <td style="text-align: left">FTP-Datenübertragung</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">22</td>
+      <td style="text-align: left">FTP-Steuerung</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">22</td>
+      <td style="text-align: left">SSH</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">23</td>
+      <td style="text-align: left">Telnet</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">25</td>
+      <td style="text-align: left">SMTP (Email)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">53</td>
+      <td style="text-align: left">DNS</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">80</td>
+      <td style="text-align: left">HTTP</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">137-139</td>
+      <td style="text-align: left">NetBIOS</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">443</td>
+      <td style="text-align: left">HTTPS</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">445</td>
+      <td style="text-align: left">SMB</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">1433</td>
+      <td style="text-align: left">MSSQL</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">3306</td>
+      <td style="text-align: left">MySQL</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">3389</td>
+      <td style="text-align: left">RDP</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">5800</td>
+      <td style="text-align: left">VNC über HTTP</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">5900</td>
+      <td style="text-align: left">VNC</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="basis-scan-via-cli">Basis Scan via CLI</h2>
+
+<p>Im folgenden Beispiel scannen wir einen Netzwerkteilnehmer mit der Adresse 192.168.1.100 und verwenden dabei die TCP-SYN-Scan Methode. In meinem Netzwerk ist unter dieser Adresse meine Heizungssteuerung (Möhlenhoff Alpha) zu erreichen. Da die TCP-SYN Scan Methode Root bzw. Admin Rechte erfordert muss dem befehl bei Debian Distributionen ein “sudo” vorangestellt um den Befehl erfolgreich auszuführen.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>nmap <span class="nt">-sS</span> <span class="nt">-Pn</span> 192.168.1.100  
+</code></pre></div></div>
+<p>Wurde der Scan erfolgreich abgeschlossen sollten wir eine Ausgabe mit den offenen Ports erhalten und auch welche Service sich dahinter verbirgt</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Nmap scan report <span class="k">for </span>192.168.1.100
+Host is up <span class="o">(</span>0.0033s latency<span class="o">)</span><span class="nb">.</span>
+Not shown: 996 closed ports
+PORT     STATE SERVICE
+21/tcp   open  ftp
+23/tcp   open  telnet
+80/tcp   open  http
+8080/tcp open  http-proxy
+MAC Address: 38:DE:60:01:xx:xx <span class="o">(</span>Mohlenhoff GmbH<span class="o">)</span>
+</code></pre></div></div>
+<p>Da aber nicht immer Root bzw. Admin Rechte vorhanden sind, kann auch ein TCP-Connect-Scan durchgeführt werden.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>nmap <span class="nt">-sT</span> <span class="nt">-Pn</span> 192.168.1.100
+</code></pre></div></div>
+
+<p>Wie erhalten die selbe Ausgabe wir zuvor. Jedoch wird der durchgeführte mit sehr hoher Wahrscheinlichkeit in einer Log-Datei mitprotokolliert. Daher sollte der TCP-SYN-Scan dieser Methode immer vorgezogen werden.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Nmap scan report <span class="k">for </span>192.168.1.100
+Host is up <span class="o">(</span>0.0070s latency<span class="o">)</span><span class="nb">.</span>
+Not shown: 996 closed ports
+PORT     STATE SERVICE
+21/tcp   open  ftp
+23/tcp   open  telnet
+80/tcp   open  http
+8080/tcp open  http-proxy
+
+Nmap <span class="k">done</span>: 1 IP address <span class="o">(</span>1 host up<span class="o">)</span> scanned <span class="k">in </span>2.45 seconds
+</code></pre></div></div>
+<p>Um eine gesamtes Subnet zur scannen können folgende Befehle verwendet werden. Bitte beachtet das der scan eines kompletten Subnets bis zu 15 Minuten dauern kann.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>nmap <span class="nt">-sS</span> <span class="nt">-Pn</span> 192.168.1.1-254
+<span class="nv">$ </span>nmap <span class="nt">-sS</span> <span class="nt">-Pn</span> 192.168.1.1/24
+</code></pre></div></div>
+
+<p>Hier sehen wir kleinen Auszug den ich von Scan meines Netzwerk erhalte:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Nmap scan report <span class="k">for </span>router.asus.com <span class="o">(</span>192.168.x.x<span class="o">)</span>
+Host is up <span class="o">(</span>0.00049s latency<span class="o">)</span><span class="nb">.</span>
+Not shown: 925 closed ports, 70 filtered ports
+PORT     STATE SERVICE
+53/tcp   open  domain
+80/tcp   open  http
+515/tcp  open  printer
+8443/tcp open  https-alt
+9100/tcp open  jetdirect
+MAC Address: BC:EE:7B:8E:xx:xx <span class="o">(</span>Asustek Computer<span class="o">)</span>
+
+Nmap scan report <span class="k">for </span>android-xxxxx <span class="o">(</span>192.168.1.xx<span class="o">)</span>
+Host is up <span class="o">(</span>0.062s latency<span class="o">)</span><span class="nb">.</span>
+All 1000 scanned ports on android-xxxxxx <span class="o">(</span>192.168.1.xx<span class="o">)</span> are closed
+MAC Address: C4:43:8F:AF:xx:xx <span class="o">(</span>xx Electronics<span class="o">)</span>
+
+Nmap scan report <span class="k">for </span>192.168.1.100
+Host is up <span class="o">(</span>0.0035s latency<span class="o">)</span><span class="nb">.</span>
+Not shown: 996 closed ports
+PORT     STATE SERVICE
+21/tcp   open  ftp
+23/tcp   open  telnet
+80/tcp   open  http
+8080/tcp open  http-proxy
+MAC Address: 38:DE:60:01:xx:xx <span class="o">(</span>Mohlenhoff GmbH<span class="o">)</span>
+
+...
+
+Nmap <span class="k">done</span>: 254 IP addresses <span class="o">(</span>8 hosts up<span class="o">)</span> scanned <span class="k">in </span>969.88 seconds
+</code></pre></div></div>
+
+<p>Um die durchgeführten Scans zu dokumentieren empfiehlt es das Ergebnis in eine Datei umzuleiten.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>nmap <span class="nt">-sT</span> <span class="nt">-Pn</span> 192.168.1.100 <span class="o">&gt;</span> scan.txt
+</code></pre></div></div>
+<p>Oder man nutzt die bereits in Nmap integrierten flags um die Ergebnise formatiert in eine Datei auszugeben und zu speichern.</p>
+
+<p><a href="https://nmap.org/book/output-formats-commandline-flags.html#output-formats-flags-type">Nmap Output Flags</a></p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Output flag</th>
+      <th style="text-align: left">Beschreibung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">-oN</td>
+      <td style="text-align: left">Normale Ausgabe in eine Datei</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">-oX</td>
+      <td style="text-align: left">XML Ausgabe in eine Datei</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">-oS</td>
+      <td style="text-align: left">ScRipT KIddi 3-Ausgabe</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">-oG</td>
+      <td style="text-align: left">grepbare Ausgabe</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">-oA</td>
+      <td style="text-align: left">Ausgabe in allen Formaten</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>nmap <span class="nt">-sT</span> <span class="nt">-Pn</span> <span class="nt">-oN</span> 192.168.1.100 
+<span class="nv">$ </span>nmap <span class="nt">-sT</span> <span class="nt">-Pn</span> <span class="nt">-oX</span> 192.168.1.100 
+<span class="nv">$ </span>nmap <span class="nt">-sT</span> <span class="nt">-Pn</span> <span class="nt">-oS</span> 192.168.1.100 
+<span class="nv">$ </span>nmap <span class="nt">-sT</span> <span class="nt">-Pn</span> <span class="nt">-oG</span> 192.168.1.100 
+<span class="nv">$ </span>nmap <span class="nt">-sT</span> <span class="nt">-Pn</span> <span class="nt">-oA</span> 192.168.1.100 
+</code></pre></div></div>
+
+<h2 id="nse-schwachstellen-scan">NSE Schwachstellen Scan</h2>
+
+<p>Nun wollen wir einen Teilnehmer im Netzwerk auf bekannte Schwachstellen prüfen. Den dafür stellt die <a href="https://nmap.org/nsedoc/categories/default.html">NSE Nmap Script Engine</a> einige Standard Skripte zur Verfügung. Der Übersichtlichkeit halber sind die NSE-Skripte in Kategorien eingeteilt. Zurzeit gibt es die Kategorien auth , broadcast , brute , default , discovery ,
+dos , exploit , external , fuzzer , intrusive , malware , safe , version und
+vuln.</p>
+
+<p class="notice--info"><strong>Information<br />
+Die NSE und ihre Skripts sind in Nmap eingebaut. Sie müssen daher
+nichts zusätzlich installieren oder konfigurieren.</strong></p>
+
+<p>Will man nur ein bestimmtes script ausführen gibt man einfach den Namen des auszuführenden Skriptes an. Zum Beispiel:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>nmap <span class="nt">-script</span> smb-vuln-ms08-067 192.168.1.110
+</code></pre></div></div>
+
+<p>Mit den flags “–script vuln” werden alle Skripte in der Kategorie vuln ausgeführt.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>nmap <span class="nt">--script</span> vuln 192.168.1.100
+</code></pre></div></div>
+
+<p>Ausgabe des Scan aus der Kategorie vuln:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Pre-scan script results:
+| broadcast-avahi-dos: 
+|   Discovered hosts:
+|     192.168.1.236
+|     192.168.1.1
+|     192.168.1.131
+|   After NULL UDP avahi packet DoS <span class="o">(</span>CVE-2011-1002<span class="o">)</span><span class="nb">.</span>
+|_  Hosts are all up <span class="o">(</span>not vulnerable<span class="o">)</span><span class="nb">.</span>
+Nmap scan report <span class="k">for </span>192.168.1.100
+Host is up <span class="o">(</span>0.0066s latency<span class="o">)</span><span class="nb">.</span>
+Not shown: 996 closed ports
+PORT     STATE SERVICE
+21/tcp   open  ftp
+23/tcp   open  telnet
+80/tcp   open  http
+|_http-cross-domain-policy: ERROR: Script execution failed <span class="o">(</span>use <span class="nt">-d</span> to debug<span class="o">)</span>
+|_http-csrf: Couldn t find any CSRF vulnerabilities
+|_http-dombased-xss: Couldn t find any DOM based XSS.
+|_http-fileupload-exploiter: 
+|_http-frontpage-login: <span class="nb">false</span>
+|_http-stored-xss: Couldn t find any stored XSS vulnerabilities.
+|_http-vuln-wnr1000-creds: ERROR: Script execution failed <span class="o">(</span>use <span class="nt">-d</span> to debug<span class="o">)</span>
+8080/tcp open  http-proxy
+|_http-cross-domain-policy: ERROR: Script execution failed <span class="o">(</span>use <span class="nt">-d</span> to debug<span class="o">)</span>
+|_http-frontpage-login: <span class="nb">false</span>
+|_http-vuln-wnr1000-creds: ERROR: Script execution failed <span class="o">(</span>use <span class="nt">-d</span> to debug<span class="o">)</span>
+
+Nmap <span class="k">done</span>: 1 IP address <span class="o">(</span>1 host up<span class="o">)</span> scanned <span class="k">in </span>53.34 seconds
+
+</code></pre></div></div>
+<p>Wie man hier schön sehen kann ist meine Heizungssteurung nicht angreifbar, sie ist nur anfällig für einen Denial of Service(Dos) Angriff <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-1002">CVE-2011-1002</a>.</p>
+
+<p>Um euch jedoch zu zeigen welche Ausgabe wir erhalten wenn wir einen Host scannen der Sicherheitslücken aufweist, seht ihr in der Ausgabe einen Scan von einer Virtuellen Windows XP Maschine SP1. Diese VM Maschine weist einige Sicherheitslücken auf und mit diesen wissen kann man sich in der Metasploit Datenbank auf die Suche nach einen geeigneten Exploits (<a href="https://www.rapid7.com/db/modules/exploit/windows/smb/ms08_067_netapi">Metasploit ms08-067</a>) machen. <a href="https://www.metasploit.com/">Metasploit</a> werd ich euch in einem meiner nächsten Artikel vorstellen.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Nmap scan report <span class="k">for </span>ie6winxp <span class="o">(</span>192.168.x.x<span class="o">)</span>
+Host is up <span class="o">(</span>0.0065s latency<span class="o">)</span><span class="nb">.</span>
+Not shown: 996 closed ports
+PORT     STATE SERVICE
+135/tcp  open  msrpc
+139/tcp  open  netbios-ssn
+445/tcp  open  microsoft-ds
+3389/tcp open  ms-wbt-server
+|_ssl-ccs-injection: No reply from server <span class="o">(</span>TIMEOUT<span class="o">)</span>
+
+Host script results:
+| smb-vuln-cve2009-3103: 
+|   VULNERABLE:
+|   SMBv2 exploit <span class="o">(</span>CVE-2009-3103, Microsoft Security Advisory 975497<span class="o">)</span>
+|     State: VULNERABLE
+|     IDs:  CVE:CVE-2009-3103
+|           Array index error <span class="k">in </span>the SMBv2 protocol implementation <span class="k">in </span>srv2.sys <span class="k">in </span>Microsoft Windows Vista Gold, SP1, and SP2, 
+|           Windows Server 2008 Gold and SP2, and Windows 7 RC allows remote attackers to execute arbitrary code or cause a 
+|           denial of service <span class="o">(</span>system crash<span class="o">)</span> via an &amp; <span class="o">(</span>ampersand<span class="o">)</span> character <span class="k">in </span>a Process ID High header field <span class="k">in </span>a NEGOTIATE 
+|           PROTOCOL REQUEST packet, which triggers an attempted dereference of an out-of-bounds memory location, 
+|           aka <span class="s2">"SMBv2 Negotiation Vulnerability."</span> 
+|           
+|     Disclosure <span class="nb">date</span>: 2009-09-08
+|     References:
+|       https://cve.mitre.org/cgi-bin/cvename.cgi?name<span class="o">=</span>CVE-2009-3103
+|_      http://www.cve.mitre.org/cgi-bin/cvename.cgi?name<span class="o">=</span>CVE-2009-3103
+| smb-vuln-ms08-067: 
+|   VULNERABLE:
+|   Microsoft Windows system vulnerable to remote code execution <span class="o">(</span>MS08-067<span class="o">)</span>
+|     State: VULNERABLE
+|     IDs:  CVE:CVE-2008-4250
+|           The Server service <span class="k">in </span>Microsoft Windows 2000 SP4, XP SP2 and SP3, Server 2003 SP1 and SP2, 
+|           Vista Gold and SP1, Server 2008, and 7 Pre-Beta allows remote attackers to execute arbitrary 
+|           code via a crafted RPC request that triggers the overflow during path canonicalization.
+|           
+|     Disclosure <span class="nb">date</span>: 2008-10-23
+|     References:
+|       https://cve.mitre.org/cgi-bin/cvename.cgi?name<span class="o">=</span>CVE-2008-4250
+|_      https://technet.microsoft.com/en-us/library/security/ms08-067.aspx
+|_smb-vuln-ms10-054: <span class="nb">false</span>
+|_smb-vuln-ms10-061: <span class="nb">false
+
+</span>Nmap <span class="k">done</span>: 1 IP address <span class="o">(</span>1 host up<span class="o">)</span> scanned <span class="k">in </span>40.75 seconds
+
+</code></pre></div></div>
+
+<h2 id="basis-scan-via-zenmap">Basis Scan via Zenmap</h2>
+
+<p>Durch die Graphische Oberfläche(Zenmap) wir die Bedienung von Nmap um einiges erleichtert. Jedoch schadet es nicht wie oben beschrieben auch einmal Nmap via CLI zu bedienen. Denn komplexere Scanaufträge lassen sich auch nur via CLI wirklich vernünftig durchführen.</p>
+
+<p>Zenmap ist in Kali Linux enthalten und kann direkt aus denn Anwedungsfenster gestartet werden.</p>
+
+<p><a href="/images/posts/Nmap/Zenmap_001.png" class="image-popup">
+    <img src="/images/posts/Nmap/Zenmap_001.png" alt="placeholder-2" />
+</a></p>
+
+<p>In der Zeile Target tragen wir ein einzelnes Ziel 192.168.1.100 ein oder einen Teilbereich z.B: 192.168.1.1-50. Im rechten Dropdown Menü wählen wir die Scan Methode aus und mit Klick auf den Button Scan starten wir den Scanvorgang.</p>
+
+<p><a href="/images/posts/Nmap/Zenmap_002.png" class="image-popup">
+    <img src="/images/posts/Nmap/Zenmap_002.png" alt="placeholder-2" />
+</a></p>
+
+<p>Im Reiter Nmap Output erhalten wir die selben Informationen wie im Ausgabe Fenster der Konsole.</p>
+
+<p><a href="/images/posts/Nmap/Zenmap_003.png" class="image-popup">
+    <img src="/images/posts/Nmap/Zenmap_003.png" alt="placeholder-2" />
+</a></p>
+
+<p>Im Reiter Ports/Host werden die offen Ports und die dahinter stehenden Dienste Grafisch angezeigt.</p>
+
+<p><a href="/images/posts/Nmap/Zenmap_004.png" class="image-popup">
+    <img src="/images/posts/Nmap/Zenmap_004.png" alt="placeholder-2" />
+</a></p>
+
+<p>Im Reiter Host Details erhalten wie detaillierte Informationen zum Host wenn diese ausgelesen werden können.</p>
+
+<p><a href="/images/posts/Nmap/Zenmap_005.png" class="image-popup">
+    <img src="/images/posts/Nmap/Zenmap_005.png" alt="placeholder-2" />
+</a></p>
+
+<p>Der Vorteil von Zenmap kommt eigentlich erst zu tragen wenn man größere Segmente oder sogar mehrere Netzwerke scannt. Jeder einzelne Scanvorgang kann unter Scan -&gt; Save gespeichert werden. Zusätzlich lässt sich die Grafische Ausgabe auch Filtern um die Ergebnisse auf die wichtigsten Ziele zu beschränken.</p>
+
+<p><a href="/images/posts/Nmap/Zenmap_006.png" class="image-popup">
+    <img src="/images/posts/Nmap/Zenmap_006.png" alt="placeholder-2" />
+</a></p>
+
+<h2 id="mehr-informationen">Mehr Informationen</h2>
+
+<p>Eine Sammlung der Wichtigsten Nmap Befehlen<br />
+<a href="/docs/nmap_40">Nmap Kommandoreferenz</a></p>
+
+<p>Die offiziele Dokumentation von Nmap<br />
+<a href="https://nmap.org/man/de/">Nmap Official Docs</a></p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">See you !</span><span class="dl">'</span><span class="p">);</span>
+</code></pre></div></div>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Aktualisiert:</strong> <time datetime="2018-01-03T00:00:00+01:00">January 03, 2018</time></p>
+        
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Teilen auf</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?via=60dmg&text=Nmap%20https%3A%2F%2Fdg60.github.io%2FNMAP%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Teilen auf Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdg60.github.io%2FNMAP%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Teilen auf Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://plus.google.com/share?url=https%3A%2F%2Fdg60.github.io%2FNMAP%2F" class="btn btn--google-plus" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Teilen auf Google Plus"><i class="fab fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fdg60.github.io%2FNMAP%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Teilen auf LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="https://dg60.github.io/PM2-Prozess-Manager-Einf%C3%BChrung/" class="pagination--pager" title="Pm2 Prozess Manager Einführung
+">Vorherige</a>
+    
+    
+      <a href="https://dg60.github.io/Metasploit/" class="pagination--pager" title="Metasploit
+">Nächste</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">Ihnen gefällt vielleicht auch</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "https://dg60.github.io/images/works/CodeGenerator/CodeGen_BuR.png"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="https://dg60.github.io/Code-Generator-BETA-Release/" rel="permalink">Code Generator Beta Release
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  weniger als 1 Minuten zum lesen
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Codegenerator
+</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "https://dg60.github.io/images/docs/metasploit.png"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="https://dg60.github.io/Metasploit/" rel="permalink">Metasploit
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  18 Minuten zum lesen
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Eine kurze Einführung in das Metasploit Framework
+</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "https://dg60.github.io/images/docs/pm2_small.png"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="https://dg60.github.io/PM2-Prozess-Manager-Einf%C3%BChrung/" rel="permalink">Pm2 Prozess Manager Einführung
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  8 Minuten zum lesen
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Eine kurze Einführung in den Prozess-Manger PM2
+</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "https://dg60.github.io/images/docs/node-red-icon.png"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="https://dg60.github.io/Node-Red-Einf%C3%BChrung/" rel="permalink">Node Red Einführung
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  4 Minuten zum lesen
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Eine kurze Einführung in Node-RED
+</p>
+  </article>
+</div>
+        
+      </div>
+    </div>
+  
+  
+</div>
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><input type="text" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+    <div id="results" class="results"></div></div>
+      </div>
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Folgen:</strong></li>
+    
+    
+      <li><a href="https://twitter.com/60dmg"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+    
+    
+      <li><a href="https://www.facebook.com/danielmichael.grill"><i class="fab fa-fw fa-facebook-square" aria-hidden="true"></i> Facebook</a></li>
+    
+    
+      <li><a href="https://github.com/dg60"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2024 Daniel Grill. Möglich durch <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="https://dg60.github.io/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+
+
+
+<script src="https://dg60.github.io/assets/js/lunr/lunr.min.js"></script>
+<script src="https://dg60.github.io/assets/js/lunr/lunr-store.js"></script>
+<script src="https://dg60.github.io/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+  </body>
+</html>

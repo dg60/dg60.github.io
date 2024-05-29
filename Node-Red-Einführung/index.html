@@ -1,0 +1,766 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.10.1 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="de" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Node Red Einführung - x44 x4d x47</title>
+<meta name="description" content="Eine kurze Einführung in Node-RED">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="de_DE">
+<meta property="og:site_name" content="x44 x4d x47">
+<meta property="og:title" content="Node Red Einführung">
+<meta property="og:url" content="https://dg60.github.io/Node-Red-Einf%C3%BChrung/">
+
+
+  <meta property="og:description" content="Eine kurze Einführung in Node-RED">
+
+
+
+  <meta property="og:image" content="https://dg60.github.io/images/docs/node-red-icon.png">
+
+
+
+  <meta name="twitter:site" content="@60dmg">
+  <meta name="twitter:title" content="Node Red Einführung">
+  <meta name="twitter:description" content="Eine kurze Einführung in Node-RED">
+  <meta name="twitter:url" content="https://dg60.github.io/Node-Red-Einf%C3%BChrung/">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+      <meta name="twitter:image" content="https://dg60.github.io/images/docs/node-red-icon.png">
+    
+  
+
+  
+
+
+
+  <meta property="article:published_time" content="2016-10-26T00:00:00+02:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://dg60.github.io/Node-Red-Einf%C3%BChrung/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Daniel Grill",
+      "url": "https://dg60.github.io",
+      "sameAs": null
+    }
+  </script>
+
+
+
+  <meta name="google-site-verification" content="googledc32a20f3ee3a459.html" />
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="x44 x4d x47 Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="https://dg60.github.io/assets/css/main.css">
+<link rel="icon" href="/favicon.ico" type="image/favicon.icon">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="https://dg60.github.io/">x44 x4d x47</a>
+        <ul class="visible-links">
+          
+            
+            <li class="masthead__menu-item">
+              <a href="https://dg60.github.io/blog_de/" >Blog</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="https://dg60.github.io/about_de/" >Über mich</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="https://dg60.github.io/work_de/" >Projekte</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="https://dg60.github.io/docs/linux_01/" >CLI Befehle</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="https://dg60.github.io/downloads/" >Downloads</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="https://dg60.github.io/impressum/" >Impressum</a>
+            </li>
+          
+        </ul>
+        
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Menü ein-/ausschalten</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+
+      
+        <img src="https://dg60.github.io/images/bio-photo.jpg" alt="Daniel Grill" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Daniel Grill</h3>
+    
+    
+      <p class="author__bio" itemprop="description">
+        Technikfreak
+      </p>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Folgen</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="http://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Österreich/Austria</span>
+        </li>
+      
+
+      
+        <li>
+          <a href="https://dg60.github.io/" itemprop="url">
+            <i class="fas fa-fw fa-link" aria-hidden="true"></i> Webseite
+          </a>
+        </li>
+      
+
+      
+        <li>
+          <a href="mailto:info@dgrill.at">
+            <meta itemprop="email" content="info@dgrill.at" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> E-Mail
+          </a>
+        </li>
+      
+
+      
+
+      
+        <li>
+          <a href="https://twitter.com/60dmg" itemprop="sameAs">
+            <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter
+          </a>
+        </li>
+      
+
+      
+        <li>
+          <a href="https://www.facebook.com/danielmichael.grill" itemprop="sameAs">
+            <i class="fab fa-fw fa-facebook-square" aria-hidden="true"></i> Facebook
+          </a>
+        </li>
+      
+
+      
+
+      
+        <li>
+          <a href="https://www.linkedin.com/in/daniel-grill-685816127" itemprop="sameAs">
+            <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://github.com/dg60" itemprop="sameAs">
+            <i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Node Red Einführung">
+    <meta itemprop="description" content="Eine kurze Einführung in Node-RED">
+    <meta itemprop="datePublished" content="October 26, 2016">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">Node Red Einführung
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  4 Minuten zum lesen
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">It´s time to code</span><span class="dl">'</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>Heute möchte ich euch eine kurze Einführung in Node-RED geben. Node-RED ist ein Visuelles Tool um einfache und anspruchsvolle Anwendungen für das <a href="https://de.wikipedia.org/wiki/Internet_der_Dinge">“Internet der Dinge”</a> kurz. IOT zu schaffen.
+Node-RED baut auf die leichtgewichtige <a href="https://nodejs.org/en/">Node.js</a> Laufzeitumgebung auf die als Grundlage zum ausführen des erzeugten Javascript code von Node-RED dient. Dadurch ist die Ausführung auf verschiedensten Hardwareplattformen möglich.</p>
+
+<p><strong>Kompatible Node-RED Hardware:</strong></p>
+
+<ul>
+  <li><a href="https://www.raspberrypi.org/">Rasperry Pi</a></li>
+  <li><a href="https://beagleboard.org/black">BeagleBone Black</a></li>
+  <li>uvm…</li>
+</ul>
+
+<p>Meine Aufmerksamkeit hat Node-RED geweckt weil es unglaublich schnell und einfach einsatzbereit ist und eine breite Palette an Funktionen abdeckt die im Bereich IOT gefordert sind. 
+In der <a href="https://www.npmjs.com/search?q=node-red">NPM</a> Bibliothek sind bereits über 120,000 Module zu finden um die Funktionen von Node-RED zu erweitern.</p>
+
+<p><img src="/images/docs/node-red-icon.png" alt="image-center" class="align-center" /></p>
+<center> <a href="https://nodered.org/">nodered.org</a> </center>
+
+<p>Node-RED Quellcode auf Github <a href="https://github.com/node-red/node-red">Node-RED Quellcode</a></p>
+
+<h2 id="installation-nodejs">Installation Node.js</h2>
+
+<p>Bevor wir mit der Installation von Node-Red starten können müssen wir noch <a href="https://nodejs.org/en/">Node js</a> installieren. Hierzu braucht ihr nur dem unten aufgeführten Link für euer Betriebssystem folgen.
+Ist Node.js bereits auf euren Computer installiert könnt ihr diesen Punkt überspringen und mit der Installation von Node-Red Fortfahren.</p>
+
+<p><a href="https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions">Node.js Installation Ubuntu</a><br />
+<a href="https://nodejs.org/en/download/package-manager/#windows">Node.js Installation Windows</a><br />
+<a href="https://nodejs.org/en/download/package-manager/#osx">Node.js Installation OSX</a></p>
+
+<p>Um zu überprüfen das <a href="https://nodejs.org/en/">Node.js</a> ordnungsgemäß installiert ist reicht folgende Befehl.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>node <span class="nt">-v</span>
+v4.4.7
+</code></pre></div></div>
+<p>Es sollte nun die aktuelle installierte Version von Node.js ausgegeben werden.</p>
+
+<h2 id="installation-node-red">Installation Node-RED</h2>
+
+<p>Um Node-Red zu installieren reicht es die unten angeführten Befehle in das Terminal einzugeben.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>npm <span class="nb">install</span> <span class="nt">-g</span> node-red
+<span class="nv">$ </span>node-red
+</code></pre></div></div>
+
+<p>Wurde die Installation von Node-RED Erfolgreich Abgeschlossen sollte folgende Ausgabe im Terminal erscheinen.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Welcome to Node-RED
+<span class="o">===================</span>
+
+20 Oct 17:50:51 - <span class="o">[</span>info] Node-RED version: v0.14.5
+20 Oct 17:50:51 - <span class="o">[</span>info] Node.js  version: v4.4.7
+20 Oct 17:50:51 - <span class="o">[</span>info] Linux 4.4.0-43-generic x64 LE
+20 Oct 17:50:51 - <span class="o">[</span>info] Loading palette nodes
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>20 Oct 17:50:53 - <span class="o">[</span>warn] <span class="nt">------------------------------------------------------</span>
+20 Oct 17:50:53 - <span class="o">[</span>info] Settings file  : /home/dgrill/.node-red/settings.js
+20 Oct 17:50:53 - <span class="o">[</span>info] User directory : /home/dgrill/.node-red
+20 Oct 17:50:53 - <span class="o">[</span>info] Flows file     : /home/dgrill/.node-red/flows_ServerGrill.json
+20 Oct 17:50:53 - <span class="o">[</span>info] Server now running at http://127.0.0.1:1880/
+20 Oct 17:50:53 - <span class="o">[</span>info] Starting flows
+20 Oct 17:50:53 - <span class="o">[</span>info] Started flows
+</code></pre></div></div>
+
+<h2 id="ersten-flow-erstellen">Ersten Flow Erstellen</h2>
+
+<p>Erreichbar ist Node-RED nun unter <a href="http://127.0.0.1:1880/">http://127.0.0.1:1880/</a></p>
+
+<p>Nun sollte folgende Seite im Browserfenster aufgerufen werden.</p>
+
+<p><a href="/images/posts/Node-RED/Node-RED_start.png" class="image-popup">
+    <img src="/images/posts/Node-RED/Node-RED_start1.png" alt="placeholder-1" />
+</a></p>
+
+<p>Auf der linken Seite sehen wir ein Menü wo alle Steuerelemente nach Gruppen (input, output, function usw.) sortiert diese können einfach per Drag und drop auf dem
+Flow Board platziert werden. In der Mitte befindet sich das Flow Board wo alle Steuerelemente frei platziert werden können.</p>
+
+<p>Auf der rechten Seite gibt es einmal das Info Fenster und das wohl wichtigste Fenster Debug. Gleich darüber befindet sich der Deploy Button der
+jetzt noch grau hinterlegt ist. Und genau das wollen wir jetzt ändern :)</p>
+
+<p>Zum Einstieg wollen wir “Hello Node-RED” im Debug Fenster ausgeben. Hierzu ziehen wir uns das inject Steuerelemente von der rechten Seite auf das 
+Flow Board.</p>
+
+<p><a href="/images/posts/Node-RED/Node-RED_start1.png" class="image-popup">
+    <img src="/images/posts/Node-RED/Node-RED_start1.png" alt="placeholder-2" />
+</a></p>
+
+<p>Durch einen Doppelklick auf das Steuerelemente öffnet sich der Eigenschaften Dialog. Hier wählen wir bei Payload die Eigenschaft string, und geben
+“Hello Node-RED” ein. Anschließend speichern wir die eingabe durch das Drücken des Button Done.</p>
+
+<p><a href="/images/posts/Node-RED/Node-RED_start2.png" class="image-popup">
+    <img src="/images/posts/Node-RED/Node-RED_start2.png" alt="placeholder-2" />
+</a></p>
+
+<p><a href="/images/posts/Node-RED/Node-RED_start3.png" class="image-popup">
+    <img src="/images/posts/Node-RED/Node-RED_start3.png" alt="placeholder-2" />
+</a></p>
+
+<p>Jetzt ziehen wir uns das Steuerelemente Debug auf das Flow Board, und verbinden einfach beide Elemente mit der Maus.</p>
+
+<p><a href="/images/posts/Node-RED/Node-RED_start4.png" class="image-popup">
+    <img src="/images/posts/Node-RED/Node-RED_start4.png" alt="placeholder-2" />
+</a></p>
+
+<p>Jetzt brauchen wir nur noch den Button Deploy drücken und die Anwendung wird generiert. Um jetzt die Meldung in das Debug Fenster zu schreiben genügt
+ein Klick auf den Inject Button und es sollte nun Hello Node-RED in der Debug Konsole ausgegeben werden.</p>
+
+<p><a href="/images/posts/Node-RED/Node-RED_start5.png" class="image-popup">
+    <img src="/images/posts/Node-RED/Node-RED_start5.png" alt="placeholder-2" />
+</a></p>
+
+<h2 id="import-eines-flows">Import eines Flows</h2>
+
+<p>Ein Flow kann ganz einfach über die Optionen in der rechten oberen ecke importiert werden. Im sich nun öffnenden Dropdown Menü wähl man die
+Option Import &gt; Clipboard.</p>
+
+<p><a href="/images/posts/Node-RED/Node-RED_start6.png" class="image-popup">
+    <img src="/images/posts/Node-RED/Node-RED_start6.png" alt="placeholder-2" />
+</a></p>
+
+<p>In den nun geöffneten Dialog kopieren wir folgendes:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[{</span><span class="nl">"id"</span><span class="p">:</span><span class="s2">"58c77306.a9bc6c"</span><span class="p">,</span><span class="nl">"type"</span><span class="p">:</span><span class="s2">"inject"</span><span class="p">,</span><span class="nl">"z"</span><span class="p">:</span><span class="s2">"f2cee3fc.2d2df8"</span><span class="p">,</span><span class="nl">"name"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="nl">"topic"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
+</span><span class="nl">"payload"</span><span class="p">:</span><span class="s2">"Hello Node-RED"</span><span class="p">,</span><span class="nl">"payloadType"</span><span class="p">:</span><span class="s2">"str"</span><span class="p">,</span><span class="nl">"repeat"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="nl">"crontab"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
+</span><span class="nl">"once"</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span><span class="nl">"x"</span><span class="p">:</span><span class="mi">156</span><span class="p">,</span><span class="nl">"y"</span><span class="p">:</span><span class="mi">128</span><span class="p">,</span><span class="nl">"wires"</span><span class="p">:[[</span><span class="s2">"8b5d31de.8a8bb"</span><span class="p">]]},</span><span class="w">
+</span><span class="p">{</span><span class="nl">"id"</span><span class="p">:</span><span class="s2">"8b5d31de.8a8bb"</span><span class="p">,</span><span class="nl">"type"</span><span class="p">:</span><span class="s2">"debug"</span><span class="p">,</span><span class="nl">"z"</span><span class="p">:</span><span class="s2">"f2cee3fc.2d2df8"</span><span class="p">,</span><span class="w">
+</span><span class="nl">"name"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="nl">"active"</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="nl">"console"</span><span class="p">:</span><span class="s2">"false"</span><span class="p">,</span><span class="nl">"complete"</span><span class="p">:</span><span class="s2">"false"</span><span class="p">,</span><span class="nl">"x"</span><span class="p">:</span><span class="mi">407</span><span class="p">,</span><span class="nl">"y"</span><span class="p">:</span><span class="mi">128</span><span class="p">,</span><span class="nl">"wires"</span><span class="p">:[]}]</span><span class="w">
+</span></code></pre></div></div>
+
+<p><a href="/images/posts/Node-RED/Node-RED_start7.png" class="image-popup">
+    <img src="/images/posts/Node-RED/Node-RED_start7.png" alt="placeholder-2" />
+</a></p>
+
+<p><a href="/images/posts/Node-RED/Node-RED_start8.png" class="image-popup">
+    <img src="/images/posts/Node-RED/Node-RED_start8.png" alt="placeholder-2" />
+</a></p>
+
+<p>Die nun importierten Elemente können nun frei am Flow Board platziert werden.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">See you !</span><span class="dl">'</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h2 id="mehr-informationen">Mehr Informationen</h2>
+
+<p>Hier findet ihr eine Menge Beispiele die ihr ganz einfach über die Importfunktion importiert könnt.<br />
+<a href="http://flows.nodered.org/">Node-RED Library</a></p>
+
+<p>Ein sehr guter Guide zum Einstieg in Node-RED<br />
+<a href="http://noderedguide.com/">Node-RED Guide</a></p>
+
+<p>NPM Package zum erstellen eines schnellen User interfaces (UI)<br />
+<a href="https://www.npmjs.com/package/node-red-contrib-ui">Node-RED UI NPM Package</a></p>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Aktualisiert:</strong> <time datetime="2016-10-26T00:00:00+02:00">October 26, 2016</time></p>
+        
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Teilen auf</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?via=60dmg&text=Node+Red+Einf%C3%BChrung%20https%3A%2F%2Fdg60.github.io%2FNode-Red-Einf%25C3%25BChrung%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Teilen auf Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdg60.github.io%2FNode-Red-Einf%25C3%25BChrung%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Teilen auf Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://plus.google.com/share?url=https%3A%2F%2Fdg60.github.io%2FNode-Red-Einf%25C3%25BChrung%2F" class="btn btn--google-plus" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Teilen auf Google Plus"><i class="fab fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fdg60.github.io%2FNode-Red-Einf%25C3%25BChrung%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Teilen auf LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="https://dg60.github.io/Homepage-ist-Online/" class="pagination--pager" title="Homepage Ist Online
+">Vorherige</a>
+    
+    
+      <a href="https://dg60.github.io/PM2-Prozess-Manager-Einf%C3%BChrung/" class="pagination--pager" title="Pm2 Prozess Manager Einführung
+">Nächste</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">Ihnen gefällt vielleicht auch</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "https://dg60.github.io/images/works/CodeGenerator/CodeGen_BuR.png"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="https://dg60.github.io/Code-Generator-BETA-Release/" rel="permalink">Code Generator Beta Release
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  weniger als 1 Minuten zum lesen
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Codegenerator
+</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "https://dg60.github.io/images/docs/metasploit.png"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="https://dg60.github.io/Metasploit/" rel="permalink">Metasploit
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  18 Minuten zum lesen
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Eine kurze Einführung in das Metasploit Framework
+</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "https://dg60.github.io/images/docs/nmap.png"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="https://dg60.github.io/NMAP/" rel="permalink">Nmap
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  13 Minuten zum lesen
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Eine kurze Einführung in den Netzwerk/Portscanner Nmap
+</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "https://dg60.github.io/images/docs/pm2_small.png"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="https://dg60.github.io/PM2-Prozess-Manager-Einf%C3%BChrung/" rel="permalink">Pm2 Prozess Manager Einführung
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  8 Minuten zum lesen
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Eine kurze Einführung in den Prozess-Manger PM2
+</p>
+  </article>
+</div>
+        
+      </div>
+    </div>
+  
+  
+</div>
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><input type="text" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+    <div id="results" class="results"></div></div>
+      </div>
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Folgen:</strong></li>
+    
+    
+      <li><a href="https://twitter.com/60dmg"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+    
+    
+      <li><a href="https://www.facebook.com/danielmichael.grill"><i class="fab fa-fw fa-facebook-square" aria-hidden="true"></i> Facebook</a></li>
+    
+    
+      <li><a href="https://github.com/dg60"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2024 Daniel Grill. Möglich durch <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="https://dg60.github.io/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+
+
+
+<script src="https://dg60.github.io/assets/js/lunr/lunr.min.js"></script>
+<script src="https://dg60.github.io/assets/js/lunr/lunr-store.js"></script>
+<script src="https://dg60.github.io/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+  </body>
+</html>
